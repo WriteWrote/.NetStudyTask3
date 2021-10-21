@@ -71,6 +71,25 @@ namespace Task3
             this.textBox_maxSize = new System.Windows.Forms.TextBox();
             this.textBox_minSize = new System.Windows.Forms.TextBox();
             this.dataGrid1 = new System.Windows.Forms.DataGrid();
+            this.label5 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button_filepick = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label_diskChosen = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label_diskAvailableSize = new System.Windows.Forms.Label();
+            this.label_diskSize = new System.Windows.Forms.Label();
+            this.button_recordAll = new System.Windows.Forms.Button();
+            this.button_recordChosen = new System.Windows.Forms.Button();
+            this.button_deleteAll = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label_sizeOfTracks = new System.Windows.Forms.Label();
+            this.label_timingOfTracks = new System.Windows.Forms.Label();
+            this.label_numberOfTracks = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.dataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -431,11 +450,183 @@ namespace Task3
             this.dataGrid1.Size = new System.Drawing.Size(735, 96);
             this.dataGrid1.TabIndex = 41;
             // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(891, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(191, 24);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Выбрать диск для записи:";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button_filepick
+            // 
+            this.button_filepick.Location = new System.Drawing.Point(832, 50);
+            this.button_filepick.Name = "button_filepick";
+            this.button_filepick.Size = new System.Drawing.Size(311, 40);
+            this.button_filepick.TabIndex = 43;
+            this.button_filepick.Text = "Выбрать файл";
+            this.button_filepick.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(836, 112);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 28);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Выбрано:";
+            // 
+            // label_diskChosen
+            // 
+            this.label_diskChosen.Location = new System.Drawing.Point(919, 112);
+            this.label_diskChosen.Name = "label_diskChosen";
+            this.label_diskChosen.Size = new System.Drawing.Size(255, 28);
+            this.label_diskChosen.TabIndex = 45;
+            this.label_diskChosen.Text = "no element was chosen";
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(836, 153);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(126, 23);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Размер диска:";
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(836, 193);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(199, 28);
+            this.label8.TabIndex = 47;
+            this.label8.Text = "Кол-во свободной памяти:";
+            // 
+            // label_diskAvailableSize
+            // 
+            this.label_diskAvailableSize.Location = new System.Drawing.Point(1026, 193);
+            this.label_diskAvailableSize.Name = "label_diskAvailableSize";
+            this.label_diskAvailableSize.Size = new System.Drawing.Size(148, 28);
+            this.label_diskAvailableSize.TabIndex = 48;
+            this.label_diskAvailableSize.Text = "empty";
+            // 
+            // label_diskSize
+            // 
+            this.label_diskSize.Location = new System.Drawing.Point(946, 153);
+            this.label_diskSize.Name = "label_diskSize";
+            this.label_diskSize.Size = new System.Drawing.Size(123, 28);
+            this.label_diskSize.TabIndex = 49;
+            this.label_diskSize.Text = "empty";
+            // 
+            // button_recordAll
+            // 
+            this.button_recordAll.Location = new System.Drawing.Point(832, 246);
+            this.button_recordAll.Name = "button_recordAll";
+            this.button_recordAll.Size = new System.Drawing.Size(311, 40);
+            this.button_recordAll.TabIndex = 50;
+            this.button_recordAll.Text = "Записать все";
+            this.button_recordAll.UseVisualStyleBackColor = true;
+            // 
+            // button_recordChosen
+            // 
+            this.button_recordChosen.Location = new System.Drawing.Point(832, 321);
+            this.button_recordChosen.Name = "button_recordChosen";
+            this.button_recordChosen.Size = new System.Drawing.Size(311, 40);
+            this.button_recordChosen.TabIndex = 51;
+            this.button_recordChosen.Text = "Записать выбранные";
+            this.button_recordChosen.UseVisualStyleBackColor = true;
+            // 
+            // button_deleteAll
+            // 
+            this.button_deleteAll.Location = new System.Drawing.Point(832, 396);
+            this.button_deleteAll.Name = "button_deleteAll";
+            this.button_deleteAll.Size = new System.Drawing.Size(311, 40);
+            this.button_deleteAll.TabIndex = 52;
+            this.button_deleteAll.Text = "Форматировать диск";
+            this.button_deleteAll.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(903, 465);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(179, 26);
+            this.label11.TabIndex = 53;
+            this.label11.Text = "Выбранные композиции:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(843, 515);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(106, 31);
+            this.label12.TabIndex = 54;
+            this.label12.Text = "Количество:";
+            // 
+            // label13
+            // 
+            this.label13.Location = new System.Drawing.Point(843, 559);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(106, 31);
+            this.label13.TabIndex = 55;
+            this.label13.Text = "Длительность:";
+            // 
+            // label14
+            // 
+            this.label14.Location = new System.Drawing.Point(843, 601);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(106, 31);
+            this.label14.TabIndex = 56;
+            this.label14.Text = "Размер:";
+            // 
+            // label_sizeOfTracks
+            // 
+            this.label_sizeOfTracks.Location = new System.Drawing.Point(976, 601);
+            this.label_sizeOfTracks.Name = "label_sizeOfTracks";
+            this.label_sizeOfTracks.Size = new System.Drawing.Size(106, 31);
+            this.label_sizeOfTracks.TabIndex = 59;
+            this.label_sizeOfTracks.Text = "0";
+            // 
+            // label_timingOfTracks
+            // 
+            this.label_timingOfTracks.Location = new System.Drawing.Point(976, 559);
+            this.label_timingOfTracks.Name = "label_timingOfTracks";
+            this.label_timingOfTracks.Size = new System.Drawing.Size(106, 31);
+            this.label_timingOfTracks.TabIndex = 58;
+            this.label_timingOfTracks.Text = "0";
+            this.label_timingOfTracks.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // label_numberOfTracks
+            // 
+            this.label_numberOfTracks.Location = new System.Drawing.Point(976, 515);
+            this.label_numberOfTracks.Name = "label_numberOfTracks";
+            this.label_numberOfTracks.Size = new System.Drawing.Size(106, 31);
+            this.label_numberOfTracks.TabIndex = 57;
+            this.label_numberOfTracks.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 663);
+            this.ClientSize = new System.Drawing.Size(1186, 663);
+            this.Controls.Add(this.label_sizeOfTracks);
+            this.Controls.Add(this.label_timingOfTracks);
+            this.Controls.Add(this.label_numberOfTracks);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.button_deleteAll);
+            this.Controls.Add(this.button_recordChosen);
+            this.Controls.Add(this.button_recordAll);
+            this.Controls.Add(this.label_diskSize);
+            this.Controls.Add(this.label_diskAvailableSize);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label_diskChosen);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button_filepick);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -484,6 +675,27 @@ namespace Task3
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button_filepick;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label_chosenFile;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label11;
 
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.GroupBox groupBox_name;

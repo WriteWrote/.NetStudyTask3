@@ -16,5 +16,15 @@ namespace Task3
         {
             InitializeComponent();
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
