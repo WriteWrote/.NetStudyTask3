@@ -7,8 +7,7 @@ namespace Task3
         private String Name;
         private String Author;
         private String Collection;
-
-        private Genres Genre;
+        private String Genre;
 
         // time in seconds
         private int time;
@@ -16,7 +15,7 @@ namespace Task3
         // size in gb
         private double size;
 
-        public MusicFile(String name, String author, String collection, Genres genre, int time, double size)
+        public MusicFile(String name, String author, String collection, String genre, int time, double size)
         {
             this.Name = name;
             this.Author = author;
@@ -38,7 +37,7 @@ namespace Task3
         {
             return this.Collection;
         }
-        public Genres GetGenre()
+        public String GetGenre()
         {
             return this.Genre;
         }

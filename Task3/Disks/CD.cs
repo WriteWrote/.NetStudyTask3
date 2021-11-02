@@ -29,6 +29,12 @@ namespace Task3
             //String[] l = diskFiles.Split('\n');
             //TakenDiskSpace = Convert.ToInt32(l[0].Split(' ')[2]);
         }
+        public CD(int diskSpace, List<MusicFile> diskFiles, double reservedPlace)
+        {
+            DiskSpace = diskSpace;
+            DiskFiles = diskFiles;
+            TakenDiskSpace = reservedPlace;
+        }
 
         public void RecordFiles(List<MusicFile> files)
         {
