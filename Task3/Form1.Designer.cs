@@ -1,4 +1,6 @@
 ﻿
+using System.Drawing;
+
 namespace Task3
 {
     partial class Form1
@@ -75,21 +77,12 @@ namespace Task3
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button_filepick = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            //this.label_diskChosen = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            //this.label_diskAvailableSize = new System.Windows.Forms.Label();
-            //this.label_diskSize = new System.Windows.Forms.Label();
-            //this.button_recordAll = new System.Windows.Forms.Button();
-            //this.button_recordChosen = new System.Windows.Forms.Button();
-            //this.button_deleteAll = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            //this.label_sizeOfTracks = new System.Windows.Forms.Label();
-            //this.label_timingOfTracks = new System.Windows.Forms.Label();
-//            this.label_numberOfTracks = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.dataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,12 +150,13 @@ namespace Task3
             // 
             // checkBox1
             // 
+            this.checkBox1.BackColor = System.Drawing.Color.Black;
             this.checkBox1.Location = new System.Drawing.Point(37, 37);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(104, 24);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // checkBox2
             // 
@@ -211,30 +205,33 @@ namespace Task3
             // 
             // button_AZ_name
             // 
+            this.button_AZ_name.BackColor = System.Drawing.Color.Black;
             this.button_AZ_name.Location = new System.Drawing.Point(37, 76);
             this.button_AZ_name.Name = "button_AZ_name";
             this.button_AZ_name.Size = new System.Drawing.Size(99, 25);
             this.button_AZ_name.TabIndex = 13;
             this.button_AZ_name.Text = "A - Z";
-            this.button_AZ_name.UseVisualStyleBackColor = true;
+            this.button_AZ_name.UseVisualStyleBackColor = false;
             // 
             // button_ZA_name
             // 
+            this.button_ZA_name.BackColor = System.Drawing.Color.Black;
             this.button_ZA_name.Location = new System.Drawing.Point(37, 120);
             this.button_ZA_name.Name = "button_ZA_name";
             this.button_ZA_name.Size = new System.Drawing.Size(99, 25);
             this.button_ZA_name.TabIndex = 14;
             this.button_ZA_name.Text = "Z - A";
-            this.button_ZA_name.UseVisualStyleBackColor = true;
+            this.button_ZA_name.UseVisualStyleBackColor = false;
             // 
             // button_findName
             // 
+            this.button_findName.BackColor = System.Drawing.Color.Black;
             this.button_findName.Location = new System.Drawing.Point(37, 222);
             this.button_findName.Name = "button_findName";
             this.button_findName.Size = new System.Drawing.Size(99, 25);
             this.button_findName.TabIndex = 15;
             this.button_findName.Text = "Find";
-            this.button_findName.UseVisualStyleBackColor = true;
+            this.button_findName.UseVisualStyleBackColor = false;
             // 
             // textBox_name
             // 
@@ -252,30 +249,33 @@ namespace Task3
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(170, 222);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 25);
             this.button1.TabIndex = 19;
             this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button_ZA_author
             // 
+            this.button_ZA_author.BackColor = System.Drawing.Color.Black;
             this.button_ZA_author.Location = new System.Drawing.Point(170, 120);
             this.button_ZA_author.Name = "button_ZA_author";
             this.button_ZA_author.Size = new System.Drawing.Size(99, 25);
             this.button_ZA_author.TabIndex = 18;
             this.button_ZA_author.Text = "Z - A";
-            this.button_ZA_author.UseVisualStyleBackColor = true;
+            this.button_ZA_author.UseVisualStyleBackColor = false;
             // 
             // button_AZ_author
             // 
+            this.button_AZ_author.BackColor = System.Drawing.Color.Black;
             this.button_AZ_author.Location = new System.Drawing.Point(170, 76);
             this.button_AZ_author.Name = "button_AZ_author";
             this.button_AZ_author.Size = new System.Drawing.Size(99, 25);
             this.button_AZ_author.TabIndex = 17;
             this.button_AZ_author.Text = "A - Z";
-            this.button_AZ_author.UseVisualStyleBackColor = true;
+            this.button_AZ_author.UseVisualStyleBackColor = false;
             // 
             // textBox_collection
             // 
@@ -286,30 +286,33 @@ namespace Task3
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(304, 222);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(99, 25);
             this.button4.TabIndex = 23;
             this.button4.Text = "Find";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button_ZA_collection
             // 
+            this.button_ZA_collection.BackColor = System.Drawing.Color.Black;
             this.button_ZA_collection.Location = new System.Drawing.Point(304, 120);
             this.button_ZA_collection.Name = "button_ZA_collection";
             this.button_ZA_collection.Size = new System.Drawing.Size(99, 25);
             this.button_ZA_collection.TabIndex = 22;
             this.button_ZA_collection.Text = "Z - A";
-            this.button_ZA_collection.UseVisualStyleBackColor = true;
+            this.button_ZA_collection.UseVisualStyleBackColor = false;
             // 
             // button_AZ_collection
             // 
+            this.button_AZ_collection.BackColor = System.Drawing.Color.Black;
             this.button_AZ_collection.Location = new System.Drawing.Point(304, 76);
             this.button_AZ_collection.Name = "button_AZ_collection";
             this.button_AZ_collection.Size = new System.Drawing.Size(99, 25);
             this.button_AZ_collection.TabIndex = 21;
             this.button_AZ_collection.Text = "A - Z";
-            this.button_AZ_collection.UseVisualStyleBackColor = true;
+            this.button_AZ_collection.UseVisualStyleBackColor = false;
             // 
             // textBox_genre
             // 
@@ -320,66 +323,73 @@ namespace Task3
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.Black;
             this.button7.Location = new System.Drawing.Point(437, 222);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(99, 25);
             this.button7.TabIndex = 27;
             this.button7.Text = "Find";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // button_ZA_genre
             // 
+            this.button_ZA_genre.BackColor = System.Drawing.Color.Black;
             this.button_ZA_genre.Location = new System.Drawing.Point(437, 120);
             this.button_ZA_genre.Name = "button_ZA_genre";
             this.button_ZA_genre.Size = new System.Drawing.Size(99, 25);
             this.button_ZA_genre.TabIndex = 26;
             this.button_ZA_genre.Text = "Z - A";
-            this.button_ZA_genre.UseVisualStyleBackColor = true;
+            this.button_ZA_genre.UseVisualStyleBackColor = false;
             // 
             // button_AZ_genre
             // 
+            this.button_AZ_genre.BackColor = System.Drawing.Color.Black;
             this.button_AZ_genre.Location = new System.Drawing.Point(437, 76);
             this.button_AZ_genre.Name = "button_AZ_genre";
             this.button_AZ_genre.Size = new System.Drawing.Size(99, 25);
             this.button_AZ_genre.TabIndex = 25;
             this.button_AZ_genre.Text = "A - Z";
-            this.button_AZ_genre.UseVisualStyleBackColor = true;
+            this.button_AZ_genre.UseVisualStyleBackColor = false;
             // 
             // button_uptime
             // 
+            this.button_uptime.BackColor = System.Drawing.Color.Black;
             this.button_uptime.Location = new System.Drawing.Point(562, 120);
             this.button_uptime.Name = "button_uptime";
             this.button_uptime.Size = new System.Drawing.Size(99, 25);
             this.button_uptime.TabIndex = 30;
             this.button_uptime.Text = "inf - 0";
-            this.button_uptime.UseVisualStyleBackColor = true;
+            this.button_uptime.UseVisualStyleBackColor = false;
             // 
             // button_downtime
             // 
+            this.button_downtime.BackColor = System.Drawing.Color.Black;
             this.button_downtime.Location = new System.Drawing.Point(562, 76);
             this.button_downtime.Name = "button_downtime";
             this.button_downtime.Size = new System.Drawing.Size(99, 25);
             this.button_downtime.TabIndex = 29;
             this.button_downtime.Text = "0 - inf";
-            this.button_downtime.UseVisualStyleBackColor = true;
+            this.button_downtime.UseVisualStyleBackColor = false;
             // 
             // button_upsize
             // 
+            this.button_upsize.BackColor = System.Drawing.Color.Black;
             this.button_upsize.Location = new System.Drawing.Point(684, 120);
             this.button_upsize.Name = "button_upsize";
             this.button_upsize.Size = new System.Drawing.Size(99, 25);
             this.button_upsize.TabIndex = 32;
             this.button_upsize.Text = "inf - 0";
-            this.button_upsize.UseVisualStyleBackColor = true;
+            this.button_upsize.UseVisualStyleBackColor = false;
             // 
             // button_downsize
             // 
+            this.button_downsize.BackColor = System.Drawing.Color.Black;
             this.button_downsize.Location = new System.Drawing.Point(684, 76);
             this.button_downsize.Name = "button_downsize";
             this.button_downsize.Size = new System.Drawing.Size(99, 25);
             this.button_downsize.TabIndex = 31;
             this.button_downsize.Text = "0 - inf";
-            this.button_downsize.UseVisualStyleBackColor = true;
+            this.button_downsize.UseVisualStyleBackColor = false;
             // 
             // textBox_minTime
             // 
@@ -464,12 +474,13 @@ namespace Task3
             // 
             // button_filepick
             // 
+            this.button_filepick.BackColor = System.Drawing.Color.Black;
             this.button_filepick.Location = new System.Drawing.Point(832, 50);
             this.button_filepick.Name = "button_filepick";
             this.button_filepick.Size = new System.Drawing.Size(311, 40);
             this.button_filepick.TabIndex = 43;
             this.button_filepick.Text = "Выбрать файл";
-            this.button_filepick.UseVisualStyleBackColor = true;
+            this.button_filepick.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -478,7 +489,6 @@ namespace Task3
             this.label6.Size = new System.Drawing.Size(101, 28);
             this.label6.TabIndex = 44;
             this.label6.Text = "Выбрано:";
-            
             // 
             // label7
             // 
@@ -496,41 +506,6 @@ namespace Task3
             this.label8.TabIndex = 47;
             this.label8.Text = "Кол-во свободной памяти:";
             // 
-            // label_diskSize
-            /* 
-            this.label_diskSize.Location = new System.Drawing.Point(946, 153);
-            this.label_diskSize.Name = "label_diskSize";
-            this.label_diskSize.Size = new System.Drawing.Size(123, 28);
-            this.label_diskSize.TabIndex = 49;
-            this.label_diskSize.Text = "empty";
-            */ 
-            // button_recordAll
-            /* 
-            this.button_recordAll.Location = new System.Drawing.Point(832, 246);
-            this.button_recordAll.Name = "button_recordAll";
-            this.button_recordAll.Size = new System.Drawing.Size(311, 40);
-            this.button_recordAll.TabIndex = 50;
-            this.button_recordAll.Text = "Записать все";
-            this.button_recordAll.UseVisualStyleBackColor = true;
-            */ 
-            // button_recordChosen
-            /* 
-            this.button_recordChosen.Location = new System.Drawing.Point(832, 321);
-            this.button_recordChosen.Name = "button_recordChosen";
-            this.button_recordChosen.Size = new System.Drawing.Size(311, 40);
-            this.button_recordChosen.TabIndex = 51;
-            this.button_recordChosen.Text = "Записать выбранные";
-            this.button_recordChosen.UseVisualStyleBackColor = true;
-            */ 
-            // button_deleteAll
-            /* 
-            this.button_deleteAll.Location = new System.Drawing.Point(832, 396);
-            this.button_deleteAll.Name = "button_deleteAll";
-            this.button_deleteAll.Size = new System.Drawing.Size(311, 40);
-            this.button_deleteAll.TabIndex = 52;
-            this.button_deleteAll.Text = "Форматировать диск";
-            this.button_deleteAll.UseVisualStyleBackColor = true;
-            */ 
             // label11
             // 
             this.label11.Location = new System.Drawing.Point(903, 465);
@@ -564,52 +539,18 @@ namespace Task3
             this.label14.TabIndex = 56;
             this.label14.Text = "Размер:";
             // 
-            // label_sizeOfTracks
-            /* 
-            this.label_sizeOfTracks.Location = new System.Drawing.Point(976, 601);
-            this.label_sizeOfTracks.Name = "label_sizeOfTracks";
-            this.label_sizeOfTracks.Size = new System.Drawing.Size(106, 31);
-            this.label_sizeOfTracks.TabIndex = 59;
-            this.label_sizeOfTracks.Text = "0";
-            */ 
-            // label_timingOfTracks
-            /* 
-            this.label_timingOfTracks.Location = new System.Drawing.Point(976, 559);
-            this.label_timingOfTracks.Name = "label_timingOfTracks";
-            this.label_timingOfTracks.Size = new System.Drawing.Size(106, 31);
-            this.label_timingOfTracks.TabIndex = 58;
-            this.label_timingOfTracks.Text = "0";
-            this.label_timingOfTracks.Click += new System.EventHandler(this.label16_Click);
-            */ 
-            // label_numberOfTracks
-            // 
-            /*this.label_numberOfTracks.Location = new System.Drawing.Point(976, 515);
-            this.label_numberOfTracks.Name = "label_numberOfTracks";
-            this.label_numberOfTracks.Size = new System.Drawing.Size(106, 31);
-            this.label_numberOfTracks.TabIndex = 57;
-            this.label_numberOfTracks.Text = "0";*/
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1186, 663);
-            /*this.Controls.Add(this.label_sizeOfTracks);
-            this.Controls.Add(this.label_timingOfTracks);
-            this.Controls.Add(this.label_numberOfTracks);*/
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            /*
-            this.Controls.Add(this.button_deleteAll);
-            this.Controls.Add(this.button_recordChosen);
-            this.Controls.Add(this.button_recordAll);
-            this.Controls.Add(this.label_diskSize);*/
-            //this.Controls.Add(this.label_diskAvailableSize);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            //this.Controls.Add(this.label_diskChosen);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button_filepick);
             this.Controls.Add(this.label5);
@@ -655,8 +596,10 @@ namespace Task3
             this.Controls.Add(this.groupBox_collection);
             this.Controls.Add(this.groupBox_name);
             this.Controls.Add(this.title);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "Form1";
             this.Text = ".Net Task3 ОбуховаЭВ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize) (this.dataGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
