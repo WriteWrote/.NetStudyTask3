@@ -30,9 +30,17 @@ namespace Task3
             //TakenDiskSpace = Convert.ToInt32(l[0].Split(' ')[2]);
         }
 
-        public void RecordFiles(string files)
+        public void RecordFiles(List<MusicFile> files)
         {
-            String[] l = files.Split('\n');
+            foreach (var musicFile in files)
+            {
+                if (this.DiskSpace >= this.TakenDiskSpace + musicFile.GetSize())
+                {
+                    this.TakenDiskSpace += musicFile.GetSize();
+                    this.DiskFiles.Add(musicFile);
+                }
+            }
+            /*String[] l = files.Split('\n');
             String[] Params = l[0].Split(' ');
             int sizeOfFiles = Convert.ToInt32(Params[2]);
 
@@ -40,16 +48,16 @@ namespace Task3
             {
                 files.Substring(0, Params[0].Length + Params[1].Length + 3);
                 this.DiskFiles += files;
-            }
+            }*/
         }
 
         public void EraseAll()
         {
-            this.DiskFiles = this.DiskSpace.ToString() + " 0\n";
+            this.DiskFiles = new List<MusicFile>();
             this.TakenDiskSpace = 0;
         }
 
-        public string getRecordedFiles()
+        public List<MusicFile> getRecordedFiles()
         {
             return this.DiskFiles;
         }
@@ -59,7 +67,7 @@ namespace Task3
             return this.DiskSpace;
         }
 
-        public int getEmptySpace()
+        public double getEmptySpace()
         {
             return this.DiskSpace - this.TakenDiskSpace;
         }

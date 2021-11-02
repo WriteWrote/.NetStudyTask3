@@ -1,15 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Task3
 {
     public interface IDisk
     {
-        void RecordFiles(String files);
+        void RecordFiles(List<MusicFile> files);
         void EraseAll();
-        String getRecordedFiles();
+        List<MusicFile> getRecordedFiles();
 
         Int32 getCapacity();
-        Int32 getEmptySpace();
+        double getEmptySpace();
 
     }
 }
