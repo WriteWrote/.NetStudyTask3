@@ -75,21 +75,21 @@ namespace Task3
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button_filepick = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label_diskChosen = new System.Windows.Forms.Label();
+            //this.label_diskChosen = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label_diskAvailableSize = new System.Windows.Forms.Label();
-            this.label_diskSize = new System.Windows.Forms.Label();
-            this.button_recordAll = new System.Windows.Forms.Button();
-            this.button_recordChosen = new System.Windows.Forms.Button();
-            this.button_deleteAll = new System.Windows.Forms.Button();
+            //this.label_diskAvailableSize = new System.Windows.Forms.Label();
+            //this.label_diskSize = new System.Windows.Forms.Label();
+            //this.button_recordAll = new System.Windows.Forms.Button();
+            //this.button_recordChosen = new System.Windows.Forms.Button();
+            //this.button_deleteAll = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label_sizeOfTracks = new System.Windows.Forms.Label();
-            this.label_timingOfTracks = new System.Windows.Forms.Label();
-            this.label_numberOfTracks = new System.Windows.Forms.Label();
+            //this.label_sizeOfTracks = new System.Windows.Forms.Label();
+            //this.label_timingOfTracks = new System.Windows.Forms.Label();
+//            this.label_numberOfTracks = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.dataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -478,14 +478,7 @@ namespace Task3
             this.label6.Size = new System.Drawing.Size(101, 28);
             this.label6.TabIndex = 44;
             this.label6.Text = "Выбрано:";
-            // 
-            // label_diskChosen
-            // 
-            this.label_diskChosen.Location = new System.Drawing.Point(919, 112);
-            this.label_diskChosen.Name = "label_diskChosen";
-            this.label_diskChosen.Size = new System.Drawing.Size(255, 28);
-            this.label_diskChosen.TabIndex = 45;
-            this.label_diskChosen.Text = "no element was chosen";
+            
             // 
             // label7
             // 
@@ -503,49 +496,41 @@ namespace Task3
             this.label8.TabIndex = 47;
             this.label8.Text = "Кол-во свободной памяти:";
             // 
-            // label_diskAvailableSize
-            // 
-            this.label_diskAvailableSize.Location = new System.Drawing.Point(1026, 193);
-            this.label_diskAvailableSize.Name = "label_diskAvailableSize";
-            this.label_diskAvailableSize.Size = new System.Drawing.Size(148, 28);
-            this.label_diskAvailableSize.TabIndex = 48;
-            this.label_diskAvailableSize.Text = "empty";
-            // 
             // label_diskSize
-            // 
+            /* 
             this.label_diskSize.Location = new System.Drawing.Point(946, 153);
             this.label_diskSize.Name = "label_diskSize";
             this.label_diskSize.Size = new System.Drawing.Size(123, 28);
             this.label_diskSize.TabIndex = 49;
             this.label_diskSize.Text = "empty";
-            // 
+            */ 
             // button_recordAll
-            // 
+            /* 
             this.button_recordAll.Location = new System.Drawing.Point(832, 246);
             this.button_recordAll.Name = "button_recordAll";
             this.button_recordAll.Size = new System.Drawing.Size(311, 40);
             this.button_recordAll.TabIndex = 50;
             this.button_recordAll.Text = "Записать все";
             this.button_recordAll.UseVisualStyleBackColor = true;
-            // 
+            */ 
             // button_recordChosen
-            // 
+            /* 
             this.button_recordChosen.Location = new System.Drawing.Point(832, 321);
             this.button_recordChosen.Name = "button_recordChosen";
             this.button_recordChosen.Size = new System.Drawing.Size(311, 40);
             this.button_recordChosen.TabIndex = 51;
             this.button_recordChosen.Text = "Записать выбранные";
             this.button_recordChosen.UseVisualStyleBackColor = true;
-            // 
+            */ 
             // button_deleteAll
-            // 
+            /* 
             this.button_deleteAll.Location = new System.Drawing.Point(832, 396);
             this.button_deleteAll.Name = "button_deleteAll";
             this.button_deleteAll.Size = new System.Drawing.Size(311, 40);
             this.button_deleteAll.TabIndex = 52;
             this.button_deleteAll.Text = "Форматировать диск";
             this.button_deleteAll.UseVisualStyleBackColor = true;
-            // 
+            */ 
             // label11
             // 
             this.label11.Location = new System.Drawing.Point(903, 465);
@@ -580,50 +565,51 @@ namespace Task3
             this.label14.Text = "Размер:";
             // 
             // label_sizeOfTracks
-            // 
+            /* 
             this.label_sizeOfTracks.Location = new System.Drawing.Point(976, 601);
             this.label_sizeOfTracks.Name = "label_sizeOfTracks";
             this.label_sizeOfTracks.Size = new System.Drawing.Size(106, 31);
             this.label_sizeOfTracks.TabIndex = 59;
             this.label_sizeOfTracks.Text = "0";
-            // 
+            */ 
             // label_timingOfTracks
-            // 
+            /* 
             this.label_timingOfTracks.Location = new System.Drawing.Point(976, 559);
             this.label_timingOfTracks.Name = "label_timingOfTracks";
             this.label_timingOfTracks.Size = new System.Drawing.Size(106, 31);
             this.label_timingOfTracks.TabIndex = 58;
             this.label_timingOfTracks.Text = "0";
             this.label_timingOfTracks.Click += new System.EventHandler(this.label16_Click);
-            // 
+            */ 
             // label_numberOfTracks
             // 
-            this.label_numberOfTracks.Location = new System.Drawing.Point(976, 515);
+            /*this.label_numberOfTracks.Location = new System.Drawing.Point(976, 515);
             this.label_numberOfTracks.Name = "label_numberOfTracks";
             this.label_numberOfTracks.Size = new System.Drawing.Size(106, 31);
             this.label_numberOfTracks.TabIndex = 57;
-            this.label_numberOfTracks.Text = "0";
+            this.label_numberOfTracks.Text = "0";*/
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 663);
-            this.Controls.Add(this.label_sizeOfTracks);
+            /*this.Controls.Add(this.label_sizeOfTracks);
             this.Controls.Add(this.label_timingOfTracks);
-            this.Controls.Add(this.label_numberOfTracks);
+            this.Controls.Add(this.label_numberOfTracks);*/
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
+            /*
             this.Controls.Add(this.button_deleteAll);
             this.Controls.Add(this.button_recordChosen);
             this.Controls.Add(this.button_recordAll);
-            this.Controls.Add(this.label_diskSize);
-            this.Controls.Add(this.label_diskAvailableSize);
+            this.Controls.Add(this.label_diskSize);*/
+            //this.Controls.Add(this.label_diskAvailableSize);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label_diskChosen);
+            //this.Controls.Add(this.label_diskChosen);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button_filepick);
             this.Controls.Add(this.label5);

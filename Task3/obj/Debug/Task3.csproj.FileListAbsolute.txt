@@ -7,3 +7,4 @@ D:\XXX\WorkingFiles\C#_2021\Task3\Task3\obj\Debug\Task3.csproj.GenerateResource.
 D:\XXX\WorkingFiles\C#_2021\Task3\Task3\obj\Debug\Task3.csproj.CoreCompileInputs.cache
 D:\XXX\WorkingFiles\C#_2021\Task3\Task3\obj\Debug\Task3.exe
 D:\XXX\WorkingFiles\C#_2021\Task3\Task3\obj\Debug\Task3.pdb
+D:\XXX\WorkingFiles\C#_2021\Task3\Task3\obj\Debug\Task3.Form1.resources
