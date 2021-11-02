@@ -7,22 +7,27 @@ namespace Task3
     {
         private readonly Int32 DiskSpace;
         private List<MusicFile> DiskFiles;
-        private Int32 TakenDiskSpace;
+        private double TakenDiskSpace;
 
         public CD()
         {
             DiskSpace = 15;
-            DiskFiles = "";
+            DiskFiles = new List<MusicFile>();
             TakenDiskSpace = 0;
         }
 
-        public CD(int diskSpace, String diskFiles)
+        public CD(int diskSpace, List<MusicFile> diskFiles)
         {
             DiskSpace = diskSpace;
             DiskFiles = diskFiles;
 
-            String[] l = diskFiles.Split('\n');
-            TakenDiskSpace = Convert.ToInt32(l[0].Split(' ')[2]);
+            TakenDiskSpace = 0;
+            foreach (MusicFile musicFile in diskFiles)
+            {
+                TakenDiskSpace += musicFile.GetSize();
+            }
+            //String[] l = diskFiles.Split('\n');
+            //TakenDiskSpace = Convert.ToInt32(l[0].Split(' ')[2]);
         }
 
         public void RecordFiles(string files)

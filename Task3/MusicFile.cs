@@ -26,6 +26,32 @@ namespace Task3
             this.size = size;
         }
 
+        public String GetName()
+        {
+            return this.Name;
+        }
+        public String GetAuthor()
+        {
+            return this.Author;
+        }
+        public String GetCollection()
+        {
+            return this.Collection;
+        }
+        public Genres GetGenre()
+        {
+            return this.Genre;
+        }
+        public int GetTime()
+        {
+            return this.time;
+        }
+        public double GetSize()
+        {
+            return this.size;
+        }
+        
+
         public override string ToString()
         {
             return Name + " " + Author + " " + Collection + " " + Genre.ToString() + " "
