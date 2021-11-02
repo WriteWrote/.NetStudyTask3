@@ -5,7 +5,7 @@ namespace Task3
 {
     public class HDD : IDisk
     {
-        private Int32 DiskSpace;
+        private readonly Int32 DiskSpace;
         private String DiskFiles;
         private Int32 TakenDiskSpace;
 
@@ -41,22 +41,27 @@ namespace Task3
 
         public void EraseAll()
         {
-            throw new System.NotImplementedException();
+            this.DiskFiles = this.DiskSpace.ToString() + " 0\n";
+            this.TakenDiskSpace = 0;
+            //throw new System.NotImplementedException();
         }
 
         public string getRecordedFiles()
         {
-            throw new System.NotImplementedException();
+            return this.DiskFiles;
+            //throw new System.NotImplementedException();
         }
 
         public int getCapacity()
         {
-            throw new System.NotImplementedException();
+            return this.DiskSpace;
+            //throw new System.NotImplementedException();
         }
 
         public int getEmptySpace()
         {
-            throw new System.NotImplementedException();
+            return this.DiskSpace - this.TakenDiskSpace;
+            //throw new System.NotImplementedException();
         }
     }
 }
