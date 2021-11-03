@@ -74,15 +74,18 @@ namespace Task3
             this.textBox_minSize = new System.Windows.Forms.TextBox();
             this.dataGrid1 = new System.Windows.Forms.DataGrid();
             this.label5 = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button_filepick = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize) (this.dataGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +117,7 @@ namespace Task3
             // 
             // groupBox_genre
             // 
+            this.groupBox_genre.BackColor = System.Drawing.Color.Black;
             this.groupBox_genre.Location = new System.Drawing.Point(428, 387);
             this.groupBox_genre.Name = "groupBox_genre";
             this.groupBox_genre.Size = new System.Drawing.Size(99, 252);
@@ -468,10 +472,6 @@ namespace Task3
             this.label5.TabIndex = 42;
             this.label5.Text = "Выбрать диск для записи:";
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // button_filepick
             // 
             this.button_filepick.BackColor = System.Drawing.Color.Black;
@@ -481,20 +481,13 @@ namespace Task3
             this.button_filepick.TabIndex = 43;
             this.button_filepick.Text = "Выбрать файл";
             this.button_filepick.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(836, 112);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 28);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "Выбрано:";
+            this.button_filepick.Click += new System.EventHandler(this.button_filepick_Click);
             // 
             // label7
             // 
             this.label7.Location = new System.Drawing.Point(836, 153);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 23);
+            this.label7.Size = new System.Drawing.Size(281, 23);
             this.label7.TabIndex = 46;
             this.label7.Text = "Размер диска:";
             // 
@@ -502,7 +495,7 @@ namespace Task3
             // 
             this.label8.Location = new System.Drawing.Point(836, 193);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(199, 28);
+            this.label8.Size = new System.Drawing.Size(338, 28);
             this.label8.TabIndex = 47;
             this.label8.Text = "Кол-во свободной памяти:";
             // 
@@ -513,7 +506,6 @@ namespace Task3
             this.label11.Size = new System.Drawing.Size(179, 26);
             this.label11.TabIndex = 53;
             this.label11.Text = "Выбранные композиции:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -539,12 +531,47 @@ namespace Task3
             this.label14.TabIndex = 56;
             this.label14.Text = "Размер:";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(832, 245);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(311, 40);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "Записать все подходящие";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(832, 321);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(311, 40);
+            this.button3.TabIndex = 58;
+            this.button3.Text = "Записать только выбранные композиции";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(836, 112);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(338, 28);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Выбрано:";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1186, 663);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -597,32 +624,35 @@ namespace Task3
             this.Controls.Add(this.groupBox_name);
             this.Controls.Add(this.title);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Location = new System.Drawing.Point(15, 15);
             this.Name = "Form1";
-            this.Text = ".Net Task3 ОбуховаЭВ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize) (this.dataGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label6;
+
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button_filepick;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label_chosenFile;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label11;
 
