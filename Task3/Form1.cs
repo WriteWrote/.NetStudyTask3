@@ -13,9 +13,14 @@ namespace Task3
 {
     public partial class Form1 : Form
     {
+        private IDisk _disk;
+
         public Form1()
         {
             InitializeComponent();
+
+            _disk = new CD();
+            
             openFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
             saveFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
         }
@@ -52,10 +57,15 @@ namespace Task3
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
-            // получаем выбранный файл
-            string filename = saveFileDialog1.FileName;
-            // сохраняем текст в файл
-            //System.IO.File.WriteAllText(filename, textBox1.Text);
+            string filename = _disk.getName() + ".txt"; //saveFileDialog1.FileName;
+            String text = _disk.getCapacity().ToString() + " " + (_disk.getCapacity() - _disk.getEmptySpace()).ToString();
+
+            foreach (MusicFile file in _disk.getRecordedFiles())
+            {
+                text += file.ToString();
+            }
+            
+            System.IO.File.WriteAllText(filename, text);
             MessageBox.Show("Файл сохранен");
         }
     }

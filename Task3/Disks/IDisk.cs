@@ -12,5 +12,8 @@ namespace Task3
         Int32 getCapacity();
         double getEmptySpace();
 
+        void setName(String name);
+        String getName();
+
     }
 }
