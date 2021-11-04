@@ -28,9 +28,18 @@ namespace Task3
             return new CD(diskName, sizeOfDisk, diskFiles, takenSpace);
         }
 
-        public void WriteToFileFromDisk(IDisk disk, String filepath)
+        public void WriteToFileFromDisk(IDisk disk, String filename)
         {
-            File.Create(filepath).Close();
+            
+            String text = disk.getCapacity() + " " + (disk.getCapacity() - disk.getEmptySpace()) + "\r\n";
+
+            foreach (MusicFile file in disk.getRecordedFiles())
+            {
+                text += file.ToString();
+            }
+            
+            System.IO.File.WriteAllText(filename, text);
+/*            File.Create(filepath).Close();
             String file = disk.getCapacity().ToString() + " " +
                           Convert.ToString(disk.getCapacity() - disk.getEmptySpace()) + "\n";
             foreach (MusicFile f in disk.getRecordedFiles())
@@ -38,8 +47,8 @@ namespace Task3
                 file += f.GetName() + " " + f.GetAuthor() + " " + f.GetCollection() + " " + f.GetGenre() +
                         " " + f.GetTime().ToString() + " " + f.GetSize().ToString() + "\n";
             }
-
             File.WriteAllText(Path.Combine(filepath), file);
+*/            
         }
     }
 }

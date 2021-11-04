@@ -76,8 +76,11 @@ namespace Task3
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
-            string filename = _disk.getName() + ".txt"; //saveFileDialog1.FileName;
-            String text = _disk.getCapacity().ToString() + " " + (_disk.getCapacity() - _disk.getEmptySpace()).ToString() + "\r\n";
+            //string filename = _disk.getName() + ".txt"; //saveFileDialog1.FileName;
+            String filename = saveFileDialog1.FileName;
+            _convertor.WriteToFileFromDisk(_disk, filename);
+/*            
+            String text = _disk.getCapacity() + " " + (_disk.getCapacity() - _disk.getEmptySpace()) + "\r\n";
 
             foreach (MusicFile file in _disk.getRecordedFiles())
             {
@@ -85,6 +88,7 @@ namespace Task3
             }
             
             System.IO.File.WriteAllText(filename, text);
+*/            
             MessageBox.Show("Файл сохранен");
         }
     }
