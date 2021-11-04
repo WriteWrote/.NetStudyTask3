@@ -72,7 +72,6 @@ namespace Task3
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_maxSize = new System.Windows.Forms.TextBox();
             this.textBox_minSize = new System.Windows.Forms.TextBox();
-            this.dataGrid1 = new System.Windows.Forms.DataGrid();
             this.label5 = new System.Windows.Forms.Label();
             this.button_filepick = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -86,7 +85,14 @@ namespace Task3
             this.label6 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            ((System.ComponentModel.ISupportInitialize) (this.dataGrid1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.columnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnAuthor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnCollection = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // title
@@ -455,15 +461,6 @@ namespace Task3
             this.textBox_minSize.Size = new System.Drawing.Size(44, 22);
             this.textBox_minSize.TabIndex = 37;
             // 
-            // dataGrid1
-            // 
-            this.dataGrid1.DataMember = "";
-            this.dataGrid1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGrid1.Location = new System.Drawing.Point(38, 265);
-            this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(735, 96);
-            this.dataGrid1.TabIndex = 41;
-            // 
             // label5
             // 
             this.label5.Location = new System.Drawing.Point(891, 9);
@@ -564,12 +561,55 @@ namespace Task3
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.columnName, this.columnAuthor, this.columnCollection, this.columnGenre, this.columnTime, this.columnSize});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 270);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 90);
+            this.dataGridView1.TabIndex = 59;
+            // 
+            // columnName
+            // 
+            this.columnName.HeaderText = "Name";
+            this.columnName.Name = "columnName";
+            // 
+            // columnAuthor
+            // 
+            this.columnAuthor.HeaderText = "Author";
+            this.columnAuthor.Name = "columnAuthor";
+            // 
+            // columnCollection
+            // 
+            this.columnCollection.HeaderText = "Collection";
+            this.columnCollection.Name = "columnCollection";
+            // 
+            // columnGenre
+            // 
+            this.columnGenre.HeaderText = "Genre";
+            this.columnGenre.Name = "columnGenre";
+            // 
+            // columnTime
+            // 
+            this.columnTime.HeaderText = "Time";
+            this.columnTime.Name = "columnTime";
+            // 
+            // columnSize
+            // 
+            this.columnSize.HeaderText = "Size";
+            this.columnSize.Name = "columnSize";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1186, 663);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label14);
@@ -581,7 +621,6 @@ namespace Task3
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button_filepick);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_maxSize);
@@ -627,10 +666,19 @@ namespace Task3
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize) (this.dataGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnAuthor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnCollection;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnGenre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnSize;
+
+        private System.Windows.Forms.DataGridView dataGridView1;
 
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
@@ -697,7 +745,6 @@ namespace Task3
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox_maxSize;
         private System.Windows.Forms.TextBox textBox_minSize;
-        private System.Windows.Forms.DataGrid dataGrid1;
 
         #endregion
     }

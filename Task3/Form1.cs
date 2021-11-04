@@ -23,6 +23,8 @@ namespace Task3
             _disk = new CD("UnknownDisk");
             _convertor = new Convertor();
             
+            //dataGrid1.ColumnCount = 5;
+            
             openFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
             saveFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
         }
