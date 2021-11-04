@@ -10,15 +10,17 @@ namespace Task3
         private List<MusicFile> _diskFiles;
         private double _takenDiskSpace;
 
-        public CD()
+        public CD(String name)
         {
+            this._name = name;
             _diskSpace = 15;
             _diskFiles = new List<MusicFile>();
             _takenDiskSpace = 0;
         }
 
-        public CD(int diskSpace, List<MusicFile> diskFiles)
+        public CD(String name, int diskSpace, List<MusicFile> diskFiles)
         {
+            this._name = name;
             _diskSpace = diskSpace;
             _diskFiles = diskFiles;
 
@@ -30,8 +32,9 @@ namespace Task3
             //String[] l = diskFiles.Split('\n');
             //TakenDiskSpace = Convert.ToInt32(l[0].Split(' ')[2]);
         }
-        public CD(int diskSpace, List<MusicFile> diskFiles, double reservedPlace)
+        public CD(String name, int diskSpace, List<MusicFile> diskFiles, double reservedPlace)
         {
+            this._name = name;
             _diskSpace = diskSpace;
             _diskFiles = diskFiles;
             _takenDiskSpace = reservedPlace;

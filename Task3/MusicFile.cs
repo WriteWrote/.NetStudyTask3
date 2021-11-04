@@ -54,7 +54,7 @@ namespace Task3
         public override string ToString()
         {
             return Name + " " + Author + " " + Collection + " " + Genre.ToString() + " "
-                   + time.ToString() + " " + size.ToString() + "\n";
+                   + time.ToString() + " " + size.ToString() + "\r\n";
         }
     }
 }

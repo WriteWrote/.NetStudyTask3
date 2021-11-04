@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DiskFileConvertor.cs" />
+    <Compile Include="Convertor.cs" />
     <Compile Include="Disks\CD.cs" />
     <Compile Include="Disks\HDD.cs" />
     <Compile Include="Disks\IDisk.cs" />
