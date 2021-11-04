@@ -39,16 +39,6 @@ namespace Task3
             }
             
             System.IO.File.WriteAllText(filename, text);
-/*            File.Create(filepath).Close();
-            String file = disk.getCapacity().ToString() + " " +
-                          Convert.ToString(disk.getCapacity() - disk.getEmptySpace()) + "\n";
-            foreach (MusicFile f in disk.getRecordedFiles())
-            {
-                file += f.GetName() + " " + f.GetAuthor() + " " + f.GetCollection() + " " + f.GetGenre() +
-                        " " + f.GetTime().ToString() + " " + f.GetSize().ToString() + "\n";
-            }
-            File.WriteAllText(Path.Combine(filepath), file);
-*/            
         }
     }
 }
