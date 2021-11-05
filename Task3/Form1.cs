@@ -8,19 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Task3.Comparers;
 
 namespace Task3
 {
     public partial class Form1 : Form
     {
         private IDisk _disk;
+        private IDisk _temp;
+        private IDisk _computer;
         private Convertor _convertor;
 
         public Form1()
         {
             InitializeComponent();
 
-            _disk = new CD("UnknownDisk");
+            _disk = new CD("emptyCD");
+            _temp = new CD("temporarySorting");
+            _computer = new HDD();
             _convertor = new Convertor();
 
             openFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
@@ -29,7 +34,18 @@ namespace Task3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //throw new System.NotImplementedException();
+            string filename = "D:\\XXX\\WorkingFiles\\C#_2021\\Task3\\Task3\\Recources\\DiskC.txt";
+            _computer = _convertor.ReadFromFileToCdDisk(filename);
+            display(_computer);
+        }
+
+        private void display(IDisk disk)
+        {
+            dataGridView1.Rows.Clear();
+            foreach (MusicFile file in disk.getRecordedFiles())
+            {
+                dataGridView1.Rows.Add(file.ToDataGridRow());
+            }
         }
 
         private void button_filepick_Click(object sender, EventArgs e)
@@ -46,11 +62,7 @@ namespace Task3
             label7.Text = "Размер диска: " + _disk.getCapacity();
             label8.Text = "Кол-во свободной памяти: " + _disk.getEmptySpace();
 
-            dataGridView1.Rows.Clear();
-            foreach (MusicFile file in _disk.getRecordedFiles())
-            {
-                dataGridView1.Rows.Add(file.ToDataGridRow());
-            }
+            //display(_disk);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -61,6 +73,31 @@ namespace Task3
             String filename = saveFileDialog1.FileName;
             _convertor.WriteToFileFromDisk(_disk, filename);
             MessageBox.Show("Файл сохранен");
+        }
+
+        private void button_AZ_name_Click(object sender, EventArgs e)
+        {
+            List<MusicFile> sortList;
+            //if (_disk == null)
+            sortList = _computer.getRecordedFiles();
+            //else
+            //sortList = _disk.getRecordedFiles();
+            sortList.Sort(new IncreasingSizeComparer());
+            _temp = new CD(_temp.getName(), sortList);
+            display(_temp);
+        }
+
+        private void button_ConfirmSorting_Click(object sender, EventArgs e)
+        {
+            //ToDo: адаптировать к сортировке компьютерного ХДД и съемного диска
+            _disk = new CD(_disk.getName(), _disk.getCapacity(), _temp.getRecordedFiles());
+            _temp = new CD("temporarySorting");
+            display(_disk);
+        }
+
+        private void button_backToHDD_Click(object sender, EventArgs e)
+        {
+            //ToDO: make possible to redact and see the content of new disks along the computer HDD
         }
     }
 }

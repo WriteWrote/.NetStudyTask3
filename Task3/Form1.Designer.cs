@@ -90,6 +90,8 @@ namespace Task3
             this.columnGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_ConfirmSorting = new System.Windows.Forms.Button();
+            this.button_backToHDD = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,6 +168,7 @@ namespace Task3
             this.button_AZ_name.TabIndex = 13;
             this.button_AZ_name.Text = "A - Z";
             this.button_AZ_name.UseVisualStyleBackColor = false;
+            this.button_AZ_name.Click += new System.EventHandler(this.button_AZ_name_Click);
             // 
             // button_ZA_name
             // 
@@ -491,7 +494,7 @@ namespace Task3
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(832, 245);
+            this.button2.Location = new System.Drawing.Point(832, 234);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(311, 40);
             this.button2.TabIndex = 57;
@@ -501,8 +504,8 @@ namespace Task3
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(832, 321);
+            this.button3.BackColor = System.Drawing.Color.DimGray;
+            this.button3.Location = new System.Drawing.Point(832, 293);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(311, 40);
             this.button3.TabIndex = 58;
@@ -605,12 +608,36 @@ namespace Task3
             this.columnSize.Name = "columnSize";
             this.columnSize.ReadOnly = true;
             // 
+            // button_ConfirmSorting
+            // 
+            this.button_ConfirmSorting.BackColor = System.Drawing.Color.Black;
+            this.button_ConfirmSorting.Location = new System.Drawing.Point(832, 351);
+            this.button_ConfirmSorting.Name = "button_ConfirmSorting";
+            this.button_ConfirmSorting.Size = new System.Drawing.Size(311, 40);
+            this.button_ConfirmSorting.TabIndex = 60;
+            this.button_ConfirmSorting.Text = "Применить сортировку";
+            this.button_ConfirmSorting.UseVisualStyleBackColor = false;
+            this.button_ConfirmSorting.Click += new System.EventHandler(this.button_ConfirmSorting_Click);
+            // 
+            // button_backToHDD
+            // 
+            this.button_backToHDD.BackColor = System.Drawing.Color.DimGray;
+            this.button_backToHDD.Location = new System.Drawing.Point(832, 412);
+            this.button_backToHDD.Name = "button_backToHDD";
+            this.button_backToHDD.Size = new System.Drawing.Size(311, 40);
+            this.button_backToHDD.TabIndex = 61;
+            this.button_backToHDD.Text = "Вернуться к просмотру файлов ХДД";
+            this.button_backToHDD.UseVisualStyleBackColor = false;
+            this.button_backToHDD.Click += new System.EventHandler(this.button_backToHDD_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1186, 663);
+            this.Controls.Add(this.button_backToHDD);
+            this.Controls.Add(this.button_ConfirmSorting);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -667,6 +694,10 @@ namespace Task3
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button button_backToHDD;
+
+        private System.Windows.Forms.Button button_ConfirmSorting;
 
         private System.Windows.Forms.DataGridViewTextBoxColumn columnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnAuthor;

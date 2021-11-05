@@ -18,6 +18,17 @@ namespace Task3
             _takenDiskSpace = 0;
         }
 
+        public CD(String name, List<MusicFile> files)
+        {
+            this._name = name;
+            _diskSpace = 15;
+            _diskFiles = files;
+            foreach (var file in files)
+            {
+                _takenDiskSpace += file.GetSize();
+            }
+        }
+
         public CD(String name, int diskSpace, List<MusicFile> diskFiles)
         {
             this._name = name;
