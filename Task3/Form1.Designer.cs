@@ -31,6 +31,10 @@ namespace Task3
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.title = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -100,6 +104,7 @@ namespace Task3
             // checkBox1
             // 
             this.checkBox1.BackColor = System.Drawing.Color.Black;
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkBox1.Location = new System.Drawing.Point(37, 37);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(104, 24);
@@ -184,6 +189,8 @@ namespace Task3
             // 
             // textBox_name
             // 
+            this.textBox_name.BackColor = System.Drawing.Color.Black;
+            this.textBox_name.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox_name.Location = new System.Drawing.Point(37, 173);
             this.textBox_name.Name = "textBox_name";
             this.textBox_name.Size = new System.Drawing.Size(99, 22);
@@ -191,6 +198,8 @@ namespace Task3
             // 
             // textBox_author
             // 
+            this.textBox_author.BackColor = System.Drawing.Color.Black;
+            this.textBox_author.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox_author.Location = new System.Drawing.Point(170, 173);
             this.textBox_author.Name = "textBox_author";
             this.textBox_author.Size = new System.Drawing.Size(99, 22);
@@ -228,6 +237,8 @@ namespace Task3
             // 
             // textBox_collection
             // 
+            this.textBox_collection.BackColor = System.Drawing.Color.Black;
+            this.textBox_collection.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox_collection.Location = new System.Drawing.Point(304, 173);
             this.textBox_collection.Name = "textBox_collection";
             this.textBox_collection.Size = new System.Drawing.Size(99, 22);
@@ -265,6 +276,8 @@ namespace Task3
             // 
             // textBox_genre
             // 
+            this.textBox_genre.BackColor = System.Drawing.Color.Black;
+            this.textBox_genre.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox_genre.Location = new System.Drawing.Point(437, 173);
             this.textBox_genre.Name = "textBox_genre";
             this.textBox_genre.Size = new System.Drawing.Size(99, 22);
@@ -342,6 +355,8 @@ namespace Task3
             // 
             // textBox_minTime
             // 
+            this.textBox_minTime.BackColor = System.Drawing.Color.Black;
+            this.textBox_minTime.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox_minTime.Location = new System.Drawing.Point(617, 173);
             this.textBox_minTime.Name = "textBox_minTime";
             this.textBox_minTime.Size = new System.Drawing.Size(44, 22);
@@ -349,6 +364,8 @@ namespace Task3
             // 
             // textBox_maxTime
             // 
+            this.textBox_maxTime.BackColor = System.Drawing.Color.Black;
+            this.textBox_maxTime.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox_maxTime.Location = new System.Drawing.Point(617, 222);
             this.textBox_maxTime.Name = "textBox_maxTime";
             this.textBox_maxTime.Size = new System.Drawing.Size(44, 22);
@@ -388,6 +405,8 @@ namespace Task3
             // 
             // textBox_maxSize
             // 
+            this.textBox_maxSize.BackColor = System.Drawing.Color.Black;
+            this.textBox_maxSize.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox_maxSize.Location = new System.Drawing.Point(739, 222);
             this.textBox_maxSize.Name = "textBox_maxSize";
             this.textBox_maxSize.Size = new System.Drawing.Size(44, 22);
@@ -395,6 +414,8 @@ namespace Task3
             // 
             // textBox_minSize
             // 
+            this.textBox_minSize.BackColor = System.Drawing.Color.Black;
+            this.textBox_minSize.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox_minSize.Location = new System.Drawing.Point(739, 173);
             this.textBox_minSize.Name = "textBox_minSize";
             this.textBox_minSize.Size = new System.Drawing.Size(44, 22);
@@ -503,16 +524,47 @@ namespace Task3
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (192)))), ((int) (((byte) (192)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (192)))), ((int) (((byte) (192)))));
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.columnName, this.columnAuthor, this.columnCollection, this.columnGenre, this.columnTime, this.columnSize});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (192)))), ((int) (((byte) (192)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(12, 270);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(776, 381);
             this.dataGridView1.TabIndex = 59;
@@ -606,9 +658,10 @@ namespace Task3
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.title);
-            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ForeColor = System.Drawing.Color.White;
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "Form1";
+            this.TransparencyKey = System.Drawing.Color.DarkRed;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
