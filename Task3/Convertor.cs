@@ -9,7 +9,8 @@ namespace Task3
         public IDisk ReadFromFileToCdDisk(String filename)
         {
             string fileText = System.IO.File.ReadAllText(filename);
-            string diskName = filename.Substring(filename.Length - 10, 6);
+            //string diskName = filename.Substring(filename.Length - 10, 6);
+            string diskName = filename;
             Int32 sizeOfDisk = Convert.ToInt32(fileText.Split('\n')[0].Trim().Split(' ')[0]);
             Double takenSpace = Convert.ToDouble(fileText.Split('\n')[0].Trim().Split(' ')[1]);
 
@@ -34,7 +35,6 @@ namespace Task3
 
         public void WriteToFileFromDisk(IDisk disk, String filename)
         {
-            
             String text = disk.getCapacity() + " " + (disk.getCapacity() - disk.getEmptySpace()) + "\r\n";
 
             foreach (MusicFile file in disk.getRecordedFiles())

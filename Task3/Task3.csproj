@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Recources\DiskC.txt" />
+    <Content Include="Recources\DiskD.txt" />
     <Content Include="Recources\DiskF.txt" />
     <Content Include="Recources\DiskG.txt" />
   </ItemGroup>

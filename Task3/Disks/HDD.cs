@@ -10,15 +10,17 @@ namespace Task3
         private List<MusicFile> _diskFiles;
         private double _takenDiskSpace;
 
-        public HDD()
+        public HDD(String name)
         {
+            _name = name;
             _diskSpace = 256;
             _diskFiles = new List<MusicFile>();
             _takenDiskSpace = 0;
         }
 
-        public HDD(int diskSpace, List<MusicFile> diskFiles)
+        public HDD(String _name, int diskSpace, List<MusicFile> diskFiles)
         {
+            this._name = _name;
             _diskSpace = diskSpace;
             _diskFiles = diskFiles;
 
@@ -65,12 +67,17 @@ namespace Task3
 
         public String getName()
         {
-            return this._name;
+            return _name.Substring(_name.Length-9,5);
         }
 
         public void setName(String name)
         {
             this._name = name;
+        }
+
+        public String getFullName()
+        {
+            return _name;
         }
     }
 }

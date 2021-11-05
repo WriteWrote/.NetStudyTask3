@@ -12,7 +12,7 @@ namespace Task3
 
         public CD(String name)
         {
-            this._name = name;
+            _name = name;
             _diskSpace = 15;
             _diskFiles = new List<MusicFile>();
             _takenDiskSpace = 0;
@@ -43,6 +43,7 @@ namespace Task3
             //String[] l = diskFiles.Split('\n');
             //TakenDiskSpace = Convert.ToInt32(l[0].Split(' ')[2]);
         }
+
         public CD(String name, int diskSpace, List<MusicFile> diskFiles, double reservedPlace)
         {
             this._name = name;
@@ -61,15 +62,6 @@ namespace Task3
                     this._diskFiles.Add(musicFile);
                 }
             }
-            /*String[] l = files.Split('\n');
-            String[] Params = l[0].Split(' ');
-            int sizeOfFiles = Convert.ToInt32(Params[2]);
-
-            if (this.TakenDiskSpace + sizeOfFiles <= this.DiskSpace)
-            {
-                files.Substring(0, Params[0].Length + Params[1].Length + 3);
-                this.DiskFiles += files;
-            }*/
         }
 
         public void EraseAll()
@@ -100,7 +92,13 @@ namespace Task3
 
         public String getName()
         {
-            return this._name;
+            //ToDo: remove hardcode
+            return _name.Substring(_name.Length - 10, 5);
+        }
+
+        public String getFullName()
+        {
+            return _name;
         }
     }
 }

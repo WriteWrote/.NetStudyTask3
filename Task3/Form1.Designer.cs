@@ -476,13 +476,13 @@ namespace Task3
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(179, 26);
             this.label11.TabIndex = 53;
-            this.label11.Text = "Выбранные композиции:";
+            this.label11.Text = "Выбрано на диске:";
             // 
             // label12
             // 
             this.label12.Location = new System.Drawing.Point(843, 515);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 31);
+            this.label12.Size = new System.Drawing.Size(300, 31);
             this.label12.TabIndex = 54;
             this.label12.Text = "Количество:";
             // 
@@ -490,7 +490,7 @@ namespace Task3
             // 
             this.label13.Location = new System.Drawing.Point(843, 559);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(106, 31);
+            this.label13.Size = new System.Drawing.Size(300, 31);
             this.label13.TabIndex = 55;
             this.label13.Text = "Длительность:";
             // 
@@ -498,7 +498,7 @@ namespace Task3
             // 
             this.label14.Location = new System.Drawing.Point(843, 601);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(106, 31);
+            this.label14.Size = new System.Drawing.Size(300, 31);
             this.label14.TabIndex = 56;
             this.label14.Text = "Размер:";
             // 

@@ -25,7 +25,7 @@ namespace Task3
 
             _disk = new CD("emptyCD");
             _temp = new CD("temporarySorting");
-            _computer = new HDD();
+            _computer = new HDD("HDD");
             _convertor = new Convertor();
 
             openFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
@@ -36,7 +36,23 @@ namespace Task3
         {
             string filename = "D:\\XXX\\WorkingFiles\\C#_2021\\Task3\\Task3\\Recources\\DiskC.txt";
             _computer = _convertor.ReadFromFileToCdDisk(filename);
+            _temp = _convertor.ReadFromFileToCdDisk(filename);
             display(_computer);
+        }
+
+        private void displayTempParams()
+        {
+            label12.Text = "Количество: " + _temp.getRecordedFiles().Count().ToString();
+            int time = 0;
+            double size = 0;
+            foreach (MusicFile file in _temp.getRecordedFiles())
+            {
+                time += file.GetTime();
+                size += file.GetSize();
+            }
+
+            label13.Text = "Длительность: " + time.ToString();
+            label14.Text = "Размер: " + size.ToString();
         }
 
         private void display(IDisk disk)
@@ -46,6 +62,8 @@ namespace Task3
             {
                 dataGridView1.Rows.Add(file.ToDataGridRow());
             }
+
+            displayTempParams();
         }
 
         private void button_filepick_Click(object sender, EventArgs e)
@@ -56,9 +74,7 @@ namespace Task3
             string filename = openFileDialog1.FileName;
             _disk = _convertor.ReadFromFileToCdDisk(filename);
 
-            // ToDo: make a better way to squeeze the name of the file
             label6.Text = "Выбрано: " + filename.Substring(0, 3) + "..." + _disk.getName();
-
             label7.Text = "Размер диска: " + _disk.getCapacity();
             label8.Text = "Кол-во свободной памяти: " + _disk.getEmptySpace();
 
@@ -69,9 +85,9 @@ namespace Task3
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
-            //string filename = _disk.getName() + ".txt"; //saveFileDialog1.FileName;
-            String filename = saveFileDialog1.FileName;
-            _convertor.WriteToFileFromDisk(_disk, filename);
+            string filename = _disk.getFullName(); //saveFileDialog1.FileName;
+            //String filename = saveFileDialog1.FileName;
+            _convertor.WriteToFileFromDisk(_temp, filename);
             MessageBox.Show("Файл сохранен");
         }
 
@@ -96,7 +112,7 @@ namespace Task3
             //else
             //sortList = _disk.getRecordedFiles();
             sortList.Sort(new AZ_NameComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
 
@@ -105,7 +121,7 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new ZA_NameComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
 
@@ -114,7 +130,7 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new DecreasingSizeComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
 
@@ -123,7 +139,7 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new IncreasingSizeComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
 
@@ -132,7 +148,7 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new DecreasingTimeComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
 
@@ -141,7 +157,7 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new IncreasingTimeComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
 
@@ -150,7 +166,7 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new AZ_AuthorComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
 
@@ -159,7 +175,7 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new ZA_AuthorComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
 
@@ -168,7 +184,7 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new AZ_GenreComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
 
@@ -177,7 +193,7 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new ZA_GenreComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
 
@@ -186,7 +202,7 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new AZ_CollectionComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
 
@@ -195,7 +211,7 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new ZA_CollectionComparer());
-            _temp = new CD(_temp.getName(), sortList);
+            _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
         }
     }
