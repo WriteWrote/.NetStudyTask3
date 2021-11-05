@@ -228,6 +228,7 @@ namespace Task3
             this.button_ZA_author.TabIndex = 18;
             this.button_ZA_author.Text = "Z - A";
             this.button_ZA_author.UseVisualStyleBackColor = false;
+            this.button_ZA_author.Click += new System.EventHandler(this.button_ZA_author_Click);
             // 
             // button_AZ_author
             // 
@@ -238,6 +239,7 @@ namespace Task3
             this.button_AZ_author.TabIndex = 17;
             this.button_AZ_author.Text = "A - Z";
             this.button_AZ_author.UseVisualStyleBackColor = false;
+            this.button_AZ_author.Click += new System.EventHandler(this.button_AZ_author_Click);
             // 
             // textBox_collection
             // 
