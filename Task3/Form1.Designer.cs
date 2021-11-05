@@ -32,12 +32,6 @@ namespace Task3
         private void InitializeComponent()
         {
             this.title = new System.Windows.Forms.Label();
-            this.groupBox_name = new System.Windows.Forms.GroupBox();
-            this.groupBox_author = new System.Windows.Forms.GroupBox();
-            this.groupBox_genre = new System.Windows.Forms.GroupBox();
-            this.groupBox_collection = new System.Windows.Forms.GroupBox();
-            this.groupBox_size = new System.Windows.Forms.GroupBox();
-            this.groupBox_timing = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -102,61 +96,6 @@ namespace Task3
             this.title.Size = new System.Drawing.Size(308, 21);
             this.title.TabIndex = 0;
             this.title.Text = "Поиск по основному полю:";
-            // 
-            // groupBox_name
-            // 
-            this.groupBox_name.Location = new System.Drawing.Point(28, 387);
-            this.groupBox_name.Name = "groupBox_name";
-            this.groupBox_name.Size = new System.Drawing.Size(99, 252);
-            this.groupBox_name.TabIndex = 1;
-            this.groupBox_name.TabStop = false;
-            this.groupBox_name.Text = "groupBox1";
-            // 
-            // groupBox_author
-            // 
-            this.groupBox_author.Location = new System.Drawing.Point(161, 387);
-            this.groupBox_author.Name = "groupBox_author";
-            this.groupBox_author.Size = new System.Drawing.Size(99, 252);
-            this.groupBox_author.TabIndex = 2;
-            this.groupBox_author.TabStop = false;
-            this.groupBox_author.Text = "groupBox2";
-            // 
-            // groupBox_genre
-            // 
-            this.groupBox_genre.BackColor = System.Drawing.Color.Black;
-            this.groupBox_genre.Location = new System.Drawing.Point(428, 387);
-            this.groupBox_genre.Name = "groupBox_genre";
-            this.groupBox_genre.Size = new System.Drawing.Size(99, 252);
-            this.groupBox_genre.TabIndex = 4;
-            this.groupBox_genre.TabStop = false;
-            this.groupBox_genre.Text = "groupBox3";
-            // 
-            // groupBox_collection
-            // 
-            this.groupBox_collection.Location = new System.Drawing.Point(295, 387);
-            this.groupBox_collection.Name = "groupBox_collection";
-            this.groupBox_collection.Size = new System.Drawing.Size(99, 252);
-            this.groupBox_collection.TabIndex = 3;
-            this.groupBox_collection.TabStop = false;
-            this.groupBox_collection.Text = "groupBox4";
-            // 
-            // groupBox_size
-            // 
-            this.groupBox_size.Location = new System.Drawing.Point(675, 387);
-            this.groupBox_size.Name = "groupBox_size";
-            this.groupBox_size.Size = new System.Drawing.Size(99, 252);
-            this.groupBox_size.TabIndex = 6;
-            this.groupBox_size.TabStop = false;
-            this.groupBox_size.Text = "groupBox5";
-            // 
-            // groupBox_timing
-            // 
-            this.groupBox_timing.Location = new System.Drawing.Point(548, 387);
-            this.groupBox_timing.Name = "groupBox_timing";
-            this.groupBox_timing.Size = new System.Drawing.Size(99, 252);
-            this.groupBox_timing.TabIndex = 5;
-            this.groupBox_timing.TabStop = false;
-            this.groupBox_timing.Text = "groupBox6";
             // 
             // checkBox1
             // 
@@ -565,43 +504,54 @@ namespace Task3
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.columnName, this.columnAuthor, this.columnCollection, this.columnGenre, this.columnTime, this.columnSize});
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(12, 270);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 90);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 381);
             this.dataGridView1.TabIndex = 59;
             // 
             // columnName
             // 
             this.columnName.HeaderText = "Name";
             this.columnName.Name = "columnName";
+            this.columnName.ReadOnly = true;
             // 
             // columnAuthor
             // 
             this.columnAuthor.HeaderText = "Author";
             this.columnAuthor.Name = "columnAuthor";
+            this.columnAuthor.ReadOnly = true;
             // 
             // columnCollection
             // 
             this.columnCollection.HeaderText = "Collection";
             this.columnCollection.Name = "columnCollection";
+            this.columnCollection.ReadOnly = true;
             // 
             // columnGenre
             // 
             this.columnGenre.HeaderText = "Genre";
             this.columnGenre.Name = "columnGenre";
+            this.columnGenre.ReadOnly = true;
             // 
             // columnTime
             // 
             this.columnTime.HeaderText = "Time";
             this.columnTime.Name = "columnTime";
+            this.columnTime.ReadOnly = true;
             // 
             // columnSize
             // 
             this.columnSize.HeaderText = "Size";
             this.columnSize.Name = "columnSize";
+            this.columnSize.ReadOnly = true;
             // 
             // Form1
             // 
@@ -655,12 +605,6 @@ namespace Task3
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.groupBox_size);
-            this.Controls.Add(this.groupBox_genre);
-            this.Controls.Add(this.groupBox_timing);
-            this.Controls.Add(this.groupBox_author);
-            this.Controls.Add(this.groupBox_collection);
-            this.Controls.Add(this.groupBox_name);
             this.Controls.Add(this.title);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Location = new System.Drawing.Point(15, 15);
@@ -705,12 +649,6 @@ namespace Task3
         private System.Windows.Forms.Label label11;
 
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.GroupBox groupBox_name;
-        private System.Windows.Forms.GroupBox groupBox_author;
-        private System.Windows.Forms.GroupBox groupBox_genre;
-        private System.Windows.Forms.GroupBox groupBox_collection;
-        private System.Windows.Forms.GroupBox groupBox_size;
-        private System.Windows.Forms.GroupBox groupBox_timing;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;

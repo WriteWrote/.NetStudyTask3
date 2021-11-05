@@ -49,11 +49,15 @@ namespace Task3
         {
             return this.size;
         }
-        
+
+        public string[] ToDataGridRow()
+        {
+            return new string[] {Name, Author, Collection, Genre, time.ToString(), size.ToString()};
+        }
 
         public override string ToString()
         {
-            return Name + " " + Author + " " + Collection + " " + Genre.ToString() + " "
+            return Name + " " + Author + " " + Collection + " " + Genre + " "
                    + time.ToString() + " " + size.ToString() + "\r\n";
         }
     }

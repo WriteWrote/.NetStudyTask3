@@ -22,9 +22,7 @@ namespace Task3
 
             _disk = new CD("UnknownDisk");
             _convertor = new Convertor();
-            
-            //dataGrid1.ColumnCount = 5;
-            
+
             openFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
             saveFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
         }
@@ -38,15 +36,21 @@ namespace Task3
         {
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
-            
+
             string filename = openFileDialog1.FileName;
             _disk = _convertor.ReadFromFileToCdDisk(filename);
-            
+
             // ToDo: make a better way to squeeze the name of the file
             label6.Text = "Выбрано: " + filename.Substring(0, 3) + "..." + _disk.getName();
-            
+
             label7.Text = "Размер диска: " + _disk.getCapacity();
             label8.Text = "Кол-во свободной памяти: " + _disk.getEmptySpace();
+
+            dataGridView1.Rows.Clear();
+            foreach (MusicFile file in _disk.getRecordedFiles())
+            {
+                dataGridView1.Rows.Add(file.ToDataGridRow());
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
