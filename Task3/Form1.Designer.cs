@@ -269,6 +269,7 @@ namespace Task3
             this.button_ZA_collection.TabIndex = 22;
             this.button_ZA_collection.Text = "Z - A";
             this.button_ZA_collection.UseVisualStyleBackColor = false;
+            this.button_ZA_collection.Click += new System.EventHandler(this.button_ZA_collection_Click);
             // 
             // button_AZ_collection
             // 
@@ -279,6 +280,7 @@ namespace Task3
             this.button_AZ_collection.TabIndex = 21;
             this.button_AZ_collection.Text = "A - Z";
             this.button_AZ_collection.UseVisualStyleBackColor = false;
+            this.button_AZ_collection.Click += new System.EventHandler(this.button_AZ_collection_Click);
             // 
             // textBox_genre
             // 

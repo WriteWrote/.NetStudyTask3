@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comparers\AZ_AuthorComparer.cs" />
+    <Compile Include="Comparers\AZ_CollectionComparer.cs" />
     <Compile Include="Comparers\AZ_GenreComparer.cs" />
     <Compile Include="Comparers\AZ_NameComparer.cs" />
     <Compile Include="Comparers\DecreasingSizeComparer.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Comparers\IncreasingSizeComparer.cs" />
     <Compile Include="Comparers\IncreasingTimeComparer.cs" />
     <Compile Include="Comparers\ZA_AuthorComparer.cs" />
+    <Compile Include="Comparers\ZA_CollectionComparer.cs" />
     <Compile Include="Comparers\ZA_GenreComparer.cs" />
     <Compile Include="Comparers\ZA_NameComparer.cs" />
     <Compile Include="Convertor.cs" />

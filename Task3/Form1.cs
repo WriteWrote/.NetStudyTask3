@@ -99,6 +99,7 @@ namespace Task3
             _temp = new CD(_temp.getName(), sortList);
             display(_temp);
         }
+
         private void button_ZA_name_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
@@ -152,6 +153,7 @@ namespace Task3
             _temp = new CD(_temp.getName(), sortList);
             display(_temp);
         }
+
         private void button_ZA_author_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
@@ -175,6 +177,24 @@ namespace Task3
             List<MusicFile> sortList;
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new ZA_GenreComparer());
+            _temp = new CD(_temp.getName(), sortList);
+            display(_temp);
+        }
+
+        private void button_AZ_collection_Click(object sender, EventArgs e)
+        {
+            List<MusicFile> sortList;
+            sortList = _computer.getRecordedFiles();
+            sortList.Sort(new AZ_CollectionComparer());
+            _temp = new CD(_temp.getName(), sortList);
+            display(_temp);
+        }
+
+        private void button_ZA_collection_Click(object sender, EventArgs e)
+        {
+            List<MusicFile> sortList;
+            sortList = _computer.getRecordedFiles();
+            sortList.Sort(new ZA_CollectionComparer());
             _temp = new CD(_temp.getName(), sortList);
             display(_temp);
         }
