@@ -179,6 +179,7 @@ namespace Task3
             this.button_ZA_name.TabIndex = 14;
             this.button_ZA_name.Text = "Z - A";
             this.button_ZA_name.UseVisualStyleBackColor = false;
+            this.button_ZA_name.Click += new System.EventHandler(this.button_ZA_name_Click);
             // 
             // button_findName
             // 
@@ -325,6 +326,7 @@ namespace Task3
             this.button_uptime.TabIndex = 30;
             this.button_uptime.Text = "inf - 0";
             this.button_uptime.UseVisualStyleBackColor = false;
+            this.button_uptime.Click += new System.EventHandler(this.button_uptime_Click);
             // 
             // button_downtime
             // 
@@ -335,6 +337,7 @@ namespace Task3
             this.button_downtime.TabIndex = 29;
             this.button_downtime.Text = "0 - inf";
             this.button_downtime.UseVisualStyleBackColor = false;
+            this.button_downtime.Click += new System.EventHandler(this.button_downtime_Click);
             // 
             // button_upsize
             // 
@@ -345,6 +348,7 @@ namespace Task3
             this.button_upsize.TabIndex = 32;
             this.button_upsize.Text = "inf - 0";
             this.button_upsize.UseVisualStyleBackColor = false;
+            this.button_upsize.Click += new System.EventHandler(this.button_upsize_Click);
             // 
             // button_downsize
             // 
@@ -355,6 +359,7 @@ namespace Task3
             this.button_downsize.TabIndex = 31;
             this.button_downsize.Text = "0 - inf";
             this.button_downsize.UseVisualStyleBackColor = false;
+            this.button_downsize.Click += new System.EventHandler(this.button_downsize_Click);
             // 
             // textBox_minTime
             // 

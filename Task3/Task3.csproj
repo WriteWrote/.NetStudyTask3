@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comparers\A_To_Z_Comparer.cs" />
+    <Compile Include="Comparers\AZ_NameComparer.cs" />
     <Compile Include="Comparers\DecreasingSizeComparer.cs" />
+    <Compile Include="Comparers\DecreasingTimeComparer.cs" />
     <Compile Include="Comparers\IncreasingSizeComparer.cs" />
-    <Compile Include="Comparers\Z_To_A_Comparer.cs" />
+    <Compile Include="Comparers\IncreasingTimeComparer.cs" />
+    <Compile Include="Comparers\ZA_NameComparer.cs" />
     <Compile Include="Convertor.cs" />
     <Compile Include="Disks\CD.cs" />
     <Compile Include="Disks\HDD.cs" />

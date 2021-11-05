@@ -75,18 +75,6 @@ namespace Task3
             MessageBox.Show("Файл сохранен");
         }
 
-        private void button_AZ_name_Click(object sender, EventArgs e)
-        {
-            List<MusicFile> sortList;
-            //if (_disk == null)
-            sortList = _computer.getRecordedFiles();
-            //else
-            //sortList = _disk.getRecordedFiles();
-            sortList.Sort(new IncreasingSizeComparer());
-            _temp = new CD(_temp.getName(), sortList);
-            display(_temp);
-        }
-
         private void button_ConfirmSorting_Click(object sender, EventArgs e)
         {
             //ToDo: адаптировать к сортировке компьютерного ХДД и съемного диска
@@ -98,6 +86,62 @@ namespace Task3
         private void button_backToHDD_Click(object sender, EventArgs e)
         {
             //ToDO: make possible to redact and see the content of new disks along the computer HDD
+        }
+
+        private void button_AZ_name_Click(object sender, EventArgs e)
+        {
+            List<MusicFile> sortList;
+            //if (_disk == null)
+            sortList = _computer.getRecordedFiles();
+            //else
+            //sortList = _disk.getRecordedFiles();
+            sortList.Sort(new AZ_NameComparer());
+            _temp = new CD(_temp.getName(), sortList);
+            display(_temp);
+        }
+        private void button_ZA_name_Click(object sender, EventArgs e)
+        {
+            List<MusicFile> sortList;
+            sortList = _computer.getRecordedFiles();
+            sortList.Sort(new ZA_NameComparer());
+            _temp = new CD(_temp.getName(), sortList);
+            display(_temp);
+        }
+
+        private void button_downsize_Click(object sender, EventArgs e)
+        {
+            List<MusicFile> sortList;
+            sortList = _computer.getRecordedFiles();
+            sortList.Sort(new DecreasingSizeComparer());
+            _temp = new CD(_temp.getName(), sortList);
+            display(_temp);
+        }
+
+        private void button_upsize_Click(object sender, EventArgs e)
+        {
+            List<MusicFile> sortList;
+            sortList = _computer.getRecordedFiles();
+            sortList.Sort(new IncreasingSizeComparer());
+            _temp = new CD(_temp.getName(), sortList);
+            display(_temp);
+        }
+
+        private void button_downtime_Click(object sender, EventArgs e)
+        {
+            List<MusicFile> sortList;
+            sortList = _computer.getRecordedFiles();
+            sortList.Sort(new DecreasingTimeComparer());
+            _temp = new CD(_temp.getName(), sortList);
+            display(_temp);
+        }
+
+        private void button_uptime_Click(object sender, EventArgs e)
+        {
+            List<MusicFile> sortList;
+            sortList = _computer.getRecordedFiles();
+            sortList.Sort(new IncreasingTimeComparer());
+            _temp = new CD(_temp.getName(), sortList);
+            display(_temp);
         }
     }
 }
