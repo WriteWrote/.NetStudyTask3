@@ -160,5 +160,23 @@ namespace Task3
             _temp = new CD(_temp.getName(), sortList);
             display(_temp);
         }
+
+        private void button_AZ_genre_Click(object sender, EventArgs e)
+        {
+            List<MusicFile> sortList;
+            sortList = _computer.getRecordedFiles();
+            sortList.Sort(new AZ_GenreComparer());
+            _temp = new CD(_temp.getName(), sortList);
+            display(_temp);
+        }
+
+        private void button_ZA_genre_Click(object sender, EventArgs e)
+        {
+            List<MusicFile> sortList;
+            sortList = _computer.getRecordedFiles();
+            sortList.Sort(new ZA_GenreComparer());
+            _temp = new CD(_temp.getName(), sortList);
+            display(_temp);
+        }
     }
 }

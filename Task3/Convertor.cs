@@ -21,6 +21,10 @@ namespace Task3
                     continue;
 
                 String[] p = line.Trim().Split(' ');
+                for (int i = 0; i < 4; i++)
+                {
+                    if ("".Equals(p[i])) p[i] = "NoName";
+                }
                 diskFiles.Add(new MusicFile(p[0], p[1], p[2], p[3],
                     Convert.ToInt32(p[4]), Convert.ToDouble(p[5])));
             }

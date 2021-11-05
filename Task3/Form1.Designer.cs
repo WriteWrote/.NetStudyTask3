@@ -308,6 +308,7 @@ namespace Task3
             this.button_ZA_genre.TabIndex = 26;
             this.button_ZA_genre.Text = "Z - A";
             this.button_ZA_genre.UseVisualStyleBackColor = false;
+            this.button_ZA_genre.Click += new System.EventHandler(this.button_ZA_genre_Click);
             // 
             // button_AZ_genre
             // 
@@ -318,6 +319,7 @@ namespace Task3
             this.button_AZ_genre.TabIndex = 25;
             this.button_AZ_genre.Text = "A - Z";
             this.button_AZ_genre.UseVisualStyleBackColor = false;
+            this.button_AZ_genre.Click += new System.EventHandler(this.button_AZ_genre_Click);
             // 
             // button_uptime
             // 
