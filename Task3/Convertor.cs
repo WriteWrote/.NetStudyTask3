@@ -47,8 +47,8 @@ namespace Task3
             else
             {
                 DialogResult result = MessageBox.Show(
-                    "Впихнуть невпихуемое?",
-                    "Впихивать или нет",
+                    "Размер записываемых файлов больше, чем размер свободного места на диске.\nЗаписать сколько получится?",
+                    "Настройки записи файлов",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Information,
                     MessageBoxDefaultButton.Button1);
