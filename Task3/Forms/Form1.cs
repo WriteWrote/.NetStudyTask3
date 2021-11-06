@@ -12,7 +12,7 @@ namespace Task3.Forms
         private IDisk _disk;
 
         private IDisk _temp;
-        
+
         private Convertor _convertor;
 
         public Form1()
@@ -70,14 +70,13 @@ namespace Task3.Forms
             label6.Text = "Выбрано: " + filename.Substring(0, 3) + "..." + _disk.getName();
             label7.Text = "Размер диска: " + _disk.getCapacity();
             label8.Text = "Кол-во свободной памяти: " + _disk.getEmptySpace();
-            
+
             DialogResult result = MessageBox.Show(
-                "Open file for editing?", 
-                "Editing or recording", 
-                MessageBoxButtons.YesNo, 
-                MessageBoxIcon.Information, 
-                MessageBoxDefaultButton.Button1, 
-                MessageBoxOptions.DefaultDesktopOnly);
+                "Open file for editing?",
+                "Editing or recording",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1);
 
             if (result == DialogResult.Yes)
             {
@@ -89,8 +88,20 @@ namespace Task3.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             _convertor.WriteToFileFromDisk(_temp, _disk);
-            MessageBox.Show("Файл сохранен");
-            display(_disk);
+
+            DialogResult result = MessageBox.Show(
+                "Показать содержимое?",
+                "Файл сохранен",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1);
+
+            if (result == DialogResult.Yes)
+            {
+                display(_disk);
+            }
+            else
+                display(_temp);
         }
 
         private void button_ConfirmSorting_Click(object sender, EventArgs e)

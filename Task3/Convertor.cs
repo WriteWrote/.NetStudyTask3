@@ -46,9 +46,14 @@ namespace Task3
             }
             else
             {
-                MessageBox.Show("Fuck?");
-                bool proceed = true;
-                if (proceed)
+                DialogResult result = MessageBox.Show(
+                    "Впихнуть невпихуемое?",
+                    "Впихивать или нет",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Information,
+                    MessageBoxDefaultButton.Button1);
+
+                if (result == DialogResult.Yes)
                 {
                     double sizeOfFiles = disk.getReservedSpace();
                     double emptySpace = disk.getEmptySpace();
