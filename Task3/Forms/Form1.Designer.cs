@@ -77,7 +77,7 @@ namespace Task3.Forms
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.button_SaveAll = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_openDiskFiles = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -521,15 +521,15 @@ namespace Task3.Forms
             this.button_SaveAll.UseVisualStyleBackColor = false;
             this.button_SaveAll.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button_openDiskFiles
             // 
-            this.button3.BackColor = System.Drawing.Color.DimGray;
-            this.button3.Location = new System.Drawing.Point(832, 293);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(311, 40);
-            this.button3.TabIndex = 58;
-            this.button3.Text = "Записать только выбранные композиции";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button_openDiskFiles.BackColor = System.Drawing.Color.Black;
+            this.button_openDiskFiles.Location = new System.Drawing.Point(832, 293);
+            this.button_openDiskFiles.Name = "button_openDiskFiles";
+            this.button_openDiskFiles.Size = new System.Drawing.Size(311, 40);
+            this.button_openDiskFiles.TabIndex = 58;
+            this.button_openDiskFiles.Text = "Перейти к просмотру файлов диска";
+            this.button_openDiskFiles.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -685,7 +685,7 @@ namespace Task3.Forms
             this.Controls.Add(this.button_backToHDD);
             this.Controls.Add(this.button_ConfirmSorting);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button_openDiskFiles);
             this.Controls.Add(this.button_SaveAll);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -740,6 +740,8 @@ namespace Task3.Forms
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button button_openDiskFiles;
 
         private System.Windows.Forms.Button button_sortTime;
 

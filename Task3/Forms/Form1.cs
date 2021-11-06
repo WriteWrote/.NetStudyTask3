@@ -85,10 +85,8 @@ namespace Task3.Forms
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void displayContent()
         {
-            _convertor.WriteToFileFromDisk(_temp, _disk);
-
             DialogResult result = MessageBox.Show(
                 "Показать содержимое?",
                 "Файл сохранен",
@@ -103,15 +101,19 @@ namespace Task3.Forms
             else
                 display(_temp);
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _convertor.WriteToFileFromDisk(_temp, _disk);
+            displayContent();
+        }
 
         private void button_ConfirmSorting_Click(object sender, EventArgs e)
         {
-            //ToDo: адаптировать к сортировке компьютерного ХДД и съемного диска
             _convertor.WriteToFileFromDisk(_temp, _disk);
             _disk = new CD(_disk.getFullName(), _disk.getCapacity(), _temp.getRecordedFiles());
-            //_temp = new CD("temporarySorting");
             this.button_backToHDD_Click(sender, e);
-            display(_temp);
+            displayContent();
+            //display(_temp);
         }
 
         private void button_backToHDD_Click(object sender, EventArgs e)
