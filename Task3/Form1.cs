@@ -220,9 +220,59 @@ namespace Task3
             List<MusicFile> pickedFiles = new List<MusicFile>();
             foreach (MusicFile file in _computer.getRecordedFiles())
             {
-                if(file.GetName().ToLower().Contains(substring))
+                if (file.GetName().ToLower().Contains(substring))
                     pickedFiles.Add(file);
             }
+
+            _temp.RecordFiles(pickedFiles);
+            display(_temp);
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string substring = textBox_author.Text.ToLower();
+            _temp.getRecordedFiles().Clear();
+
+            List<MusicFile> pickedFiles = new List<MusicFile>();
+            foreach (MusicFile file in _computer.getRecordedFiles())
+            {
+                if (file.GetAuthor().ToLower().Contains(substring))
+                    pickedFiles.Add(file);
+            }
+
+            _temp.RecordFiles(pickedFiles);
+            display(_temp);
+        }
+
+        private void button_findCollection_Click(object sender, EventArgs e)
+        {
+            string substring = textBox_collection.Text.ToLower();
+            _temp.getRecordedFiles().Clear();
+
+            List<MusicFile> pickedFiles = new List<MusicFile>();
+            foreach (MusicFile file in _computer.getRecordedFiles())
+            {
+                if (file.GetCollection().ToLower().Contains(substring))
+                    pickedFiles.Add(file);
+            }
+
+            _temp.RecordFiles(pickedFiles);
+            display(_temp);
+        }
+
+        private void button_findGenre_Click(object sender, EventArgs e)
+        {
+            string substring = textBox_genre.Text.ToLower();
+            _temp.getRecordedFiles().Clear();
+
+            List<MusicFile> pickedFiles = new List<MusicFile>();
+            foreach (MusicFile file in _computer.getRecordedFiles())
+            {
+                if (file.GetGenre().ToLower().Contains(substring))
+                    pickedFiles.Add(file);
+            }
+
             _temp.RecordFiles(pickedFiles);
             display(_temp);
         }

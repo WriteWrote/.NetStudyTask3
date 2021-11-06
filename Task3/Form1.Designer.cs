@@ -47,15 +47,15 @@ namespace Task3
             this.button_findName = new System.Windows.Forms.Button();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_author = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_findAuthor = new System.Windows.Forms.Button();
             this.button_ZA_author = new System.Windows.Forms.Button();
             this.button_AZ_author = new System.Windows.Forms.Button();
             this.textBox_collection = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button_findCollection = new System.Windows.Forms.Button();
             this.button_ZA_collection = new System.Windows.Forms.Button();
             this.button_AZ_collection = new System.Windows.Forms.Button();
             this.textBox_genre = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button_findGenre = new System.Windows.Forms.Button();
             this.button_ZA_genre = new System.Windows.Forms.Button();
             this.button_AZ_genre = new System.Windows.Forms.Button();
             this.button_uptime = new System.Windows.Forms.Button();
@@ -78,7 +78,7 @@ namespace Task3
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_SaveAll = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -210,15 +210,16 @@ namespace Task3
             this.textBox_author.Size = new System.Drawing.Size(99, 22);
             this.textBox_author.TabIndex = 20;
             // 
-            // button1
+            // button_findAuthor
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(170, 222);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 25);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button_findAuthor.BackColor = System.Drawing.Color.Black;
+            this.button_findAuthor.Location = new System.Drawing.Point(170, 222);
+            this.button_findAuthor.Name = "button_findAuthor";
+            this.button_findAuthor.Size = new System.Drawing.Size(99, 25);
+            this.button_findAuthor.TabIndex = 19;
+            this.button_findAuthor.Text = "Find";
+            this.button_findAuthor.UseVisualStyleBackColor = false;
+            this.button_findAuthor.Click += new System.EventHandler(this.button1_Click);
             // 
             // button_ZA_author
             // 
@@ -251,15 +252,16 @@ namespace Task3
             this.textBox_collection.Size = new System.Drawing.Size(99, 22);
             this.textBox_collection.TabIndex = 24;
             // 
-            // button4
+            // button_findCollection
             // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(304, 222);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(99, 25);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "Find";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button_findCollection.BackColor = System.Drawing.Color.Black;
+            this.button_findCollection.Location = new System.Drawing.Point(304, 222);
+            this.button_findCollection.Name = "button_findCollection";
+            this.button_findCollection.Size = new System.Drawing.Size(99, 25);
+            this.button_findCollection.TabIndex = 23;
+            this.button_findCollection.Text = "Find";
+            this.button_findCollection.UseVisualStyleBackColor = false;
+            this.button_findCollection.Click += new System.EventHandler(this.button_findCollection_Click);
             // 
             // button_ZA_collection
             // 
@@ -292,15 +294,16 @@ namespace Task3
             this.textBox_genre.Size = new System.Drawing.Size(99, 22);
             this.textBox_genre.TabIndex = 28;
             // 
-            // button7
+            // button_findGenre
             // 
-            this.button7.BackColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(437, 222);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(99, 25);
-            this.button7.TabIndex = 27;
-            this.button7.Text = "Find";
-            this.button7.UseVisualStyleBackColor = false;
+            this.button_findGenre.BackColor = System.Drawing.Color.Black;
+            this.button_findGenre.Location = new System.Drawing.Point(437, 222);
+            this.button_findGenre.Name = "button_findGenre";
+            this.button_findGenre.Size = new System.Drawing.Size(99, 25);
+            this.button_findGenre.TabIndex = 27;
+            this.button_findGenre.Text = "Find";
+            this.button_findGenre.UseVisualStyleBackColor = false;
+            this.button_findGenre.Click += new System.EventHandler(this.button_findGenre_Click);
             // 
             // button_ZA_genre
             // 
@@ -503,16 +506,16 @@ namespace Task3
             this.label14.TabIndex = 56;
             this.label14.Text = "Размер:";
             // 
-            // button2
+            // button_SaveAll
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(832, 234);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(311, 40);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "Записать все подходящие";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_SaveAll.BackColor = System.Drawing.Color.Black;
+            this.button_SaveAll.Location = new System.Drawing.Point(832, 234);
+            this.button_SaveAll.Name = "button_SaveAll";
+            this.button_SaveAll.Size = new System.Drawing.Size(311, 40);
+            this.button_SaveAll.TabIndex = 57;
+            this.button_SaveAll.Text = "Записать все подходящие";
+            this.button_SaveAll.UseVisualStyleBackColor = false;
+            this.button_SaveAll.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -652,7 +655,7 @@ namespace Task3
             this.Controls.Add(this.button_ConfirmSorting);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button_SaveAll);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -675,15 +678,15 @@ namespace Task3
             this.Controls.Add(this.button_uptime);
             this.Controls.Add(this.button_downtime);
             this.Controls.Add(this.textBox_genre);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button_findGenre);
             this.Controls.Add(this.button_ZA_genre);
             this.Controls.Add(this.button_AZ_genre);
             this.Controls.Add(this.textBox_collection);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button_findCollection);
             this.Controls.Add(this.button_ZA_collection);
             this.Controls.Add(this.button_AZ_collection);
             this.Controls.Add(this.textBox_author);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_findAuthor);
             this.Controls.Add(this.button_ZA_author);
             this.Controls.Add(this.button_AZ_author);
             this.Controls.Add(this.textBox_name);
@@ -706,6 +709,14 @@ namespace Task3
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button button_findGenre;
+
+        private System.Windows.Forms.Button button_findCollection;
+
+        private System.Windows.Forms.Button button_findAuthor;
+
+        private System.Windows.Forms.Button button_SaveAll;
 
         private System.Windows.Forms.Button button_backToHDD;
 
