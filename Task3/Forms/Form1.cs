@@ -107,14 +107,15 @@ namespace Task3.Forms
         private void button_ConfirmSorting_Click(object sender, EventArgs e)
         {
             //ToDo: адаптировать к сортировке компьютерного ХДД и съемного диска
+            _convertor.WriteToFileFromDisk(_temp, _disk);
             _disk = new CD(_disk.getFullName(), _disk.getCapacity(), _temp.getRecordedFiles());
-            _temp = new CD("temporarySorting");
-            display(_disk);
+            //_temp = new CD("temporarySorting");
+            this.button_backToHDD_Click(sender, e);
+            display(_temp);
         }
 
         private void button_backToHDD_Click(object sender, EventArgs e)
         {
-            //ToDO: make possible to redact and see the content of new disks along the computer HDD
             _temp = _convertor.ReadFromFileToCdDisk(filename);
             display(_temp);
         }
@@ -281,12 +282,12 @@ namespace Task3.Forms
 
         private void button_sortSize_Click(object sender, EventArgs e)
         {
-            int maxSize = Int32.MaxValue;
-            if (!"".Equals(textBox_maxTime.Text))
-                maxSize = Convert.ToInt32(textBox_maxTime.Text);
-            int minSize = -1;
-            if (!"".Equals(textBox_minTime.Text))
-                minSize = Convert.ToInt32(textBox_minTime.Text);
+            double maxSize = Double.MaxValue;
+            if (!"".Equals(textBox_maxSize.Text))
+                maxSize = Convert.ToDouble(textBox_maxSize.Text);
+            double minSize = 0;
+            if (!"".Equals(textBox_minSize.Text))
+                minSize = Convert.ToDouble(textBox_minSize.Text);
 
 
             List<MusicFile> pickedFiles = new List<MusicFile>();

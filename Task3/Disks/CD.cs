@@ -93,7 +93,7 @@ namespace Task3
         public String getName()
         {
             //ToDo: remove hardcode
-            return _name.Substring(_name.Length - 10, 5);
+            return _name.Substring(_name.Length - 10, 6);
         }
 
         public String getFullName()
