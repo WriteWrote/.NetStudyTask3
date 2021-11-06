@@ -74,7 +74,7 @@ namespace Task3
                 text += file.ToString();
             }
 
-            File.WriteAllText(disk.getName(), text);
+            System.IO.File.WriteAllText(disk.getFullName(), text);
         }
     }
 }

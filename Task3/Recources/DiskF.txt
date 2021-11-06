@@ -1,6 +1,7 @@
-11 7,5
+11 10
 Bohemian_Rhapsody Queen NoName NoName 300 2,5
 Live_Free_or_Let_Me_Die Skillet NoName Rock 200 1,5
 Hey,Mama NoName NoName NoName 250 1,5
 It's_Not_Me_It's_You Skillet NoName Rock 250 1
 Figlio_Della_Luna RockOpera NoName NoName 50 1
+Bohemian_Rhapsody Queen NoName NoName 300 2,5
