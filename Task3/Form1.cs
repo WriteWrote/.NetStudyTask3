@@ -15,8 +15,10 @@ namespace Task3
     public partial class Form1 : Form
     {
         private IDisk _disk;
+
         private IDisk _temp;
-        private IDisk _computer;
+
+        //private IDisk _computer;
         private Convertor _convertor;
 
         public Form1()
@@ -25,7 +27,7 @@ namespace Task3
 
             _disk = new CD("emptyCD");
             _temp = new CD("temporarySorting");
-            _computer = new HDD("HDD");
+            //_computer = new HDD("HDD");
             _convertor = new Convertor();
 
             openFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
@@ -35,9 +37,8 @@ namespace Task3
         private void Form1_Load(object sender, EventArgs e)
         {
             string filename = "D:\\XXX\\WorkingFiles\\C#_2021\\Task3\\Task3\\Recources\\DiskC.txt";
-            _computer = _convertor.ReadFromFileToCdDisk(filename);
             _temp = _convertor.ReadFromFileToCdDisk(filename);
-            display(_computer);
+            display(_temp);
         }
 
         private void displayTempParams()
@@ -91,7 +92,7 @@ namespace Task3
         private void button_ConfirmSorting_Click(object sender, EventArgs e)
         {
             //ToDo: адаптировать к сортировке компьютерного ХДД и съемного диска
-            _disk = new CD(_disk.getName(), _disk.getCapacity(), _temp.getRecordedFiles());
+            _disk = new CD(_disk.getFullName(), _disk.getCapacity(), _temp.getRecordedFiles());
             _temp = new CD("temporarySorting");
             display(_disk);
         }
@@ -99,115 +100,82 @@ namespace Task3
         private void button_backToHDD_Click(object sender, EventArgs e)
         {
             //ToDO: make possible to redact and see the content of new disks along the computer HDD
-            _temp = new CD("TemporarySorting", _computer.getRecordedFiles());
+
+            //_temp = new CD("TemporarySorting", _computer.getRecordedFiles());
+            _temp = _convertor.ReadFromFileToCdDisk(_temp.getFullName());
             display(_temp);
         }
 
         private void button_AZ_name_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new AZ_NameComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new AZ_NameComparer());
+            ;
             display(_temp);
         }
 
         private void button_ZA_name_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new ZA_NameComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new ZA_NameComparer());
             display(_temp);
         }
 
         private void button_downsize_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new DecreasingSizeComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new DecreasingSizeComparer());
             display(_temp);
         }
 
         private void button_upsize_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new IncreasingSizeComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new IncreasingSizeComparer());
             display(_temp);
         }
 
         private void button_downtime_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new DecreasingTimeComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new DecreasingTimeComparer());
             display(_temp);
         }
 
         private void button_uptime_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new IncreasingTimeComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new IncreasingTimeComparer());
             display(_temp);
         }
 
         private void button_AZ_author_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new AZ_AuthorComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new AZ_AuthorComparer());
             display(_temp);
         }
 
         private void button_ZA_author_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new ZA_AuthorComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new ZA_AuthorComparer());
             display(_temp);
         }
 
         private void button_AZ_genre_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new AZ_GenreComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new AZ_GenreComparer());
             display(_temp);
         }
 
         private void button_ZA_genre_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new ZA_GenreComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new ZA_GenreComparer());
             display(_temp);
         }
 
         private void button_AZ_collection_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new AZ_CollectionComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new AZ_CollectionComparer());
             display(_temp);
         }
 
         private void button_ZA_collection_Click(object sender, EventArgs e)
         {
-            List<MusicFile> sortList;
-            sortList = _temp.getRecordedFiles();
-            sortList.Sort(new ZA_CollectionComparer());
-            _temp = new CD(_temp.getFullName(), sortList);
+            _temp.getRecordedFiles().Sort(new ZA_CollectionComparer());
             display(_temp);
         }
 
