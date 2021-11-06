@@ -379,6 +379,7 @@ namespace Task3
             this.textBox_minTime.Name = "textBox_minTime";
             this.textBox_minTime.Size = new System.Drawing.Size(44, 22);
             this.textBox_minTime.TabIndex = 33;
+            this.textBox_minTime.TextChanged += new System.EventHandler(this.textBox_minTime_TextChanged);
             // 
             // textBox_maxTime
             // 
@@ -636,7 +637,7 @@ namespace Task3
             // 
             // button_backToHDD
             // 
-            this.button_backToHDD.BackColor = System.Drawing.Color.DimGray;
+            this.button_backToHDD.BackColor = System.Drawing.Color.Black;
             this.button_backToHDD.Location = new System.Drawing.Point(832, 412);
             this.button_backToHDD.Name = "button_backToHDD";
             this.button_backToHDD.Size = new System.Drawing.Size(311, 40);

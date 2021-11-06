@@ -99,15 +99,14 @@ namespace Task3
         private void button_backToHDD_Click(object sender, EventArgs e)
         {
             //ToDO: make possible to redact and see the content of new disks along the computer HDD
+            _temp = new CD("TemporarySorting", _computer.getRecordedFiles());
+            display(_temp);
         }
 
         private void button_AZ_name_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            //if (_disk == null)
-            sortList = _computer.getRecordedFiles();
-            //else
-            //sortList = _disk.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new AZ_NameComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -116,7 +115,7 @@ namespace Task3
         private void button_ZA_name_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            sortList = _computer.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new ZA_NameComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -125,7 +124,7 @@ namespace Task3
         private void button_downsize_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            sortList = _computer.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new DecreasingSizeComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -134,7 +133,7 @@ namespace Task3
         private void button_upsize_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            sortList = _computer.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new IncreasingSizeComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -143,7 +142,7 @@ namespace Task3
         private void button_downtime_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            sortList = _computer.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new DecreasingTimeComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -152,7 +151,7 @@ namespace Task3
         private void button_uptime_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            sortList = _computer.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new IncreasingTimeComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -161,7 +160,7 @@ namespace Task3
         private void button_AZ_author_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            sortList = _computer.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new AZ_AuthorComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -170,7 +169,7 @@ namespace Task3
         private void button_ZA_author_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            sortList = _computer.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new ZA_AuthorComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -179,7 +178,7 @@ namespace Task3
         private void button_AZ_genre_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            sortList = _computer.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new AZ_GenreComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -188,7 +187,7 @@ namespace Task3
         private void button_ZA_genre_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            sortList = _computer.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new ZA_GenreComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -197,7 +196,7 @@ namespace Task3
         private void button_AZ_collection_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            sortList = _computer.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new AZ_CollectionComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -206,7 +205,7 @@ namespace Task3
         private void button_ZA_collection_Click(object sender, EventArgs e)
         {
             List<MusicFile> sortList;
-            sortList = _computer.getRecordedFiles();
+            sortList = _temp.getRecordedFiles();
             sortList.Sort(new ZA_CollectionComparer());
             _temp = new CD(_temp.getFullName(), sortList);
             display(_temp);
@@ -215,15 +214,15 @@ namespace Task3
         private void button_findName_Click(object sender, EventArgs e)
         {
             string substring = textBox_name.Text.ToLower();
-            _temp.getRecordedFiles().Clear();
 
             List<MusicFile> pickedFiles = new List<MusicFile>();
-            foreach (MusicFile file in _computer.getRecordedFiles())
+            foreach (MusicFile file in _temp.getRecordedFiles())
             {
                 if (file.GetName().ToLower().Contains(substring))
                     pickedFiles.Add(file);
             }
 
+            _temp.getRecordedFiles().Clear();
             _temp.RecordFiles(pickedFiles);
             display(_temp);
         }
@@ -232,15 +231,15 @@ namespace Task3
         private void button1_Click(object sender, EventArgs e)
         {
             string substring = textBox_author.Text.ToLower();
-            _temp.getRecordedFiles().Clear();
 
             List<MusicFile> pickedFiles = new List<MusicFile>();
-            foreach (MusicFile file in _computer.getRecordedFiles())
+            foreach (MusicFile file in _temp.getRecordedFiles())
             {
                 if (file.GetAuthor().ToLower().Contains(substring))
                     pickedFiles.Add(file);
             }
 
+            _temp.getRecordedFiles().Clear();
             _temp.RecordFiles(pickedFiles);
             display(_temp);
         }
@@ -248,15 +247,15 @@ namespace Task3
         private void button_findCollection_Click(object sender, EventArgs e)
         {
             string substring = textBox_collection.Text.ToLower();
-            _temp.getRecordedFiles().Clear();
 
             List<MusicFile> pickedFiles = new List<MusicFile>();
-            foreach (MusicFile file in _computer.getRecordedFiles())
+            foreach (MusicFile file in _temp.getRecordedFiles())
             {
                 if (file.GetCollection().ToLower().Contains(substring))
                     pickedFiles.Add(file);
             }
 
+            _temp.getRecordedFiles().Clear();
             _temp.RecordFiles(pickedFiles);
             display(_temp);
         }
@@ -264,15 +263,30 @@ namespace Task3
         private void button_findGenre_Click(object sender, EventArgs e)
         {
             string substring = textBox_genre.Text.ToLower();
-            _temp.getRecordedFiles().Clear();
 
             List<MusicFile> pickedFiles = new List<MusicFile>();
-            foreach (MusicFile file in _computer.getRecordedFiles())
+            foreach (MusicFile file in _temp.getRecordedFiles())
             {
                 if (file.GetGenre().ToLower().Contains(substring))
                     pickedFiles.Add(file);
             }
 
+            _temp.getRecordedFiles().Clear();
+            _temp.RecordFiles(pickedFiles);
+            display(_temp);
+        }
+
+        private void textBox_minTime_TextChanged(object sender, EventArgs e)
+        {
+            int minTime = Convert.ToInt32(textBox_minTime.Text);
+            List<MusicFile> pickedFiles = new List<MusicFile>();
+            foreach (MusicFile file in _temp.getRecordedFiles())
+            {
+                if (file.GetTime() < minTime)
+                    pickedFiles.Add(file);
+            }
+
+            _temp.getRecordedFiles().Clear();
             _temp.RecordFiles(pickedFiles);
             display(_temp);
         }
