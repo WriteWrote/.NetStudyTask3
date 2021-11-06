@@ -276,13 +276,42 @@ namespace Task3
             display(_temp);
         }
 
-        private void textBox_minTime_TextChanged(object sender, EventArgs e)
+        private void button_sortTime_Click(object sender, EventArgs e)
         {
-            int minTime = Convert.ToInt32(textBox_minTime.Text);
+            int maxTime = Int32.MaxValue;
+            if (!"".Equals(textBox_maxTime.Text))
+                maxTime = Convert.ToInt32(textBox_maxTime.Text);
+            int minTime = -1;
+            if (!"".Equals(textBox_minTime.Text))
+                minTime = Convert.ToInt32(textBox_minTime.Text);
+
+
             List<MusicFile> pickedFiles = new List<MusicFile>();
             foreach (MusicFile file in _temp.getRecordedFiles())
             {
-                if (file.GetTime() < minTime)
+                if (file.GetTime() >= minTime && file.GetTime() <= maxTime)
+                    pickedFiles.Add(file);
+            }
+
+            _temp.getRecordedFiles().Clear();
+            _temp.RecordFiles(pickedFiles);
+            display(_temp);
+        }
+
+        private void button_sortSize_Click(object sender, EventArgs e)
+        {
+            int maxSize = Int32.MaxValue;
+            if (!"".Equals(textBox_maxTime.Text))
+                maxSize = Convert.ToInt32(textBox_maxTime.Text);
+            int minSize = -1;
+            if (!"".Equals(textBox_minTime.Text))
+                minSize = Convert.ToInt32(textBox_minTime.Text);
+
+
+            List<MusicFile> pickedFiles = new List<MusicFile>();
+            foreach (MusicFile file in _temp.getRecordedFiles())
+            {
+                if (file.GetSize() >= minSize && file.GetSize() <= maxSize)
                     pickedFiles.Add(file);
             }
 

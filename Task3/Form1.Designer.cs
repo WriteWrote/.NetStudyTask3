@@ -92,6 +92,8 @@ namespace Task3
             this.columnSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_ConfirmSorting = new System.Windows.Forms.Button();
             this.button_backToHDD = new System.Windows.Forms.Button();
+            this.button_sortSize = new System.Windows.Forms.Button();
+            this.button_sortTime = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,6 +186,7 @@ namespace Task3
             // button_findName
             // 
             this.button_findName.BackColor = System.Drawing.Color.Black;
+            this.button_findName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_findName.Location = new System.Drawing.Point(37, 222);
             this.button_findName.Name = "button_findName";
             this.button_findName.Size = new System.Drawing.Size(99, 25);
@@ -213,6 +216,7 @@ namespace Task3
             // button_findAuthor
             // 
             this.button_findAuthor.BackColor = System.Drawing.Color.Black;
+            this.button_findAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_findAuthor.Location = new System.Drawing.Point(170, 222);
             this.button_findAuthor.Name = "button_findAuthor";
             this.button_findAuthor.Size = new System.Drawing.Size(99, 25);
@@ -255,6 +259,7 @@ namespace Task3
             // button_findCollection
             // 
             this.button_findCollection.BackColor = System.Drawing.Color.Black;
+            this.button_findCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_findCollection.Location = new System.Drawing.Point(304, 222);
             this.button_findCollection.Name = "button_findCollection";
             this.button_findCollection.Size = new System.Drawing.Size(99, 25);
@@ -297,6 +302,7 @@ namespace Task3
             // button_findGenre
             // 
             this.button_findGenre.BackColor = System.Drawing.Color.Black;
+            this.button_findGenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_findGenre.Location = new System.Drawing.Point(437, 222);
             this.button_findGenre.Name = "button_findGenre";
             this.button_findGenre.Size = new System.Drawing.Size(99, 25);
@@ -375,24 +381,23 @@ namespace Task3
             // 
             this.textBox_minTime.BackColor = System.Drawing.Color.Black;
             this.textBox_minTime.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox_minTime.Location = new System.Drawing.Point(617, 173);
+            this.textBox_minTime.Location = new System.Drawing.Point(617, 162);
             this.textBox_minTime.Name = "textBox_minTime";
             this.textBox_minTime.Size = new System.Drawing.Size(44, 22);
             this.textBox_minTime.TabIndex = 33;
-            this.textBox_minTime.TextChanged += new System.EventHandler(this.textBox_minTime_TextChanged);
             // 
             // textBox_maxTime
             // 
             this.textBox_maxTime.BackColor = System.Drawing.Color.Black;
             this.textBox_maxTime.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox_maxTime.Location = new System.Drawing.Point(617, 222);
+            this.textBox_maxTime.Location = new System.Drawing.Point(617, 190);
             this.textBox_maxTime.Name = "textBox_maxTime";
             this.textBox_maxTime.Size = new System.Drawing.Size(44, 22);
             this.textBox_maxTime.TabIndex = 34;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(562, 177);
+            this.label1.Location = new System.Drawing.Point(562, 166);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 18);
             this.label1.TabIndex = 35;
@@ -400,7 +405,7 @@ namespace Task3
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(562, 225);
+            this.label2.Location = new System.Drawing.Point(562, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 18);
             this.label2.TabIndex = 36;
@@ -408,7 +413,7 @@ namespace Task3
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(684, 225);
+            this.label3.Location = new System.Drawing.Point(684, 193);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 18);
             this.label3.TabIndex = 40;
@@ -416,7 +421,7 @@ namespace Task3
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(684, 177);
+            this.label4.Location = new System.Drawing.Point(684, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 18);
             this.label4.TabIndex = 39;
@@ -426,7 +431,7 @@ namespace Task3
             // 
             this.textBox_maxSize.BackColor = System.Drawing.Color.Black;
             this.textBox_maxSize.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox_maxSize.Location = new System.Drawing.Point(739, 222);
+            this.textBox_maxSize.Location = new System.Drawing.Point(739, 190);
             this.textBox_maxSize.Name = "textBox_maxSize";
             this.textBox_maxSize.Size = new System.Drawing.Size(44, 22);
             this.textBox_maxSize.TabIndex = 38;
@@ -435,7 +440,7 @@ namespace Task3
             // 
             this.textBox_minSize.BackColor = System.Drawing.Color.Black;
             this.textBox_minSize.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox_minSize.Location = new System.Drawing.Point(739, 173);
+            this.textBox_minSize.Location = new System.Drawing.Point(739, 162);
             this.textBox_minSize.Name = "textBox_minSize";
             this.textBox_minSize.Size = new System.Drawing.Size(44, 22);
             this.textBox_minSize.TabIndex = 37;
@@ -646,12 +651,38 @@ namespace Task3
             this.button_backToHDD.UseVisualStyleBackColor = false;
             this.button_backToHDD.Click += new System.EventHandler(this.button_backToHDD_Click);
             // 
+            // button_sortSize
+            // 
+            this.button_sortSize.BackColor = System.Drawing.Color.Black;
+            this.button_sortSize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_sortSize.Location = new System.Drawing.Point(690, 222);
+            this.button_sortSize.Name = "button_sortSize";
+            this.button_sortSize.Size = new System.Drawing.Size(99, 25);
+            this.button_sortSize.TabIndex = 63;
+            this.button_sortSize.Text = "Sort";
+            this.button_sortSize.UseVisualStyleBackColor = false;
+            this.button_sortSize.Click += new System.EventHandler(this.button_sortSize_Click);
+            // 
+            // button_sortTime
+            // 
+            this.button_sortTime.BackColor = System.Drawing.Color.Black;
+            this.button_sortTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_sortTime.Location = new System.Drawing.Point(557, 222);
+            this.button_sortTime.Name = "button_sortTime";
+            this.button_sortTime.Size = new System.Drawing.Size(99, 25);
+            this.button_sortTime.TabIndex = 62;
+            this.button_sortTime.Text = "Sort";
+            this.button_sortTime.UseVisualStyleBackColor = false;
+            this.button_sortTime.Click += new System.EventHandler(this.button_sortTime_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1186, 663);
+            this.Controls.Add(this.button_sortSize);
+            this.Controls.Add(this.button_sortTime);
             this.Controls.Add(this.button_backToHDD);
             this.Controls.Add(this.button_ConfirmSorting);
             this.Controls.Add(this.dataGridView1);
@@ -710,6 +741,10 @@ namespace Task3
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button button_sortTime;
+
+        private System.Windows.Forms.Button button_sortSize;
 
         private System.Windows.Forms.Button button_findGenre;
 
