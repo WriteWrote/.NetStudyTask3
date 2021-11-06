@@ -1,24 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Task3.Comparers;
 
-namespace Task3
+namespace Task3.Forms
 {
     public partial class Form1 : Form
     {
+        private readonly String filename = "D:\\XXX\\WorkingFiles\\C#_2021\\Task3\\Task3\\Recources\\DiskC.txt";
         private IDisk _disk;
 
         private IDisk _temp;
-
-        //private IDisk _computer;
+        
         private Convertor _convertor;
 
         public Form1()
@@ -27,7 +21,6 @@ namespace Task3
 
             _disk = new CD("emptyCD");
             _temp = new CD("temporarySorting");
-            //_computer = new HDD("HDD");
             _convertor = new Convertor();
 
             openFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
@@ -36,7 +29,6 @@ namespace Task3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string filename = "D:\\XXX\\WorkingFiles\\C#_2021\\Task3\\Task3\\Recources\\DiskC.txt";
             _temp = _convertor.ReadFromFileToCdDisk(filename);
             display(_temp);
         }
@@ -78,8 +70,20 @@ namespace Task3
             label6.Text = "Выбрано: " + filename.Substring(0, 3) + "..." + _disk.getName();
             label7.Text = "Размер диска: " + _disk.getCapacity();
             label8.Text = "Кол-во свободной памяти: " + _disk.getEmptySpace();
+            
+            DialogResult result = MessageBox.Show(
+                "Open file for editing?", 
+                "Editing or recording", 
+                MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Information, 
+                MessageBoxDefaultButton.Button1, 
+                MessageBoxOptions.DefaultDesktopOnly);
 
-            //display(_disk);
+            if (result == DialogResult.Yes)
+            {
+                _temp = _disk;
+                display(_temp);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -100,9 +104,7 @@ namespace Task3
         private void button_backToHDD_Click(object sender, EventArgs e)
         {
             //ToDO: make possible to redact and see the content of new disks along the computer HDD
-
-            //_temp = new CD("TemporarySorting", _computer.getRecordedFiles());
-            _temp = _convertor.ReadFromFileToCdDisk(_temp.getFullName());
+            _temp = _convertor.ReadFromFileToCdDisk(filename);
             display(_temp);
         }
 

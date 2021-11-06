@@ -1,7 +1,5 @@
 ﻿
-using System.Drawing;
-
-namespace Task3
+namespace Task3.Forms
 {
     partial class Form1
     {
