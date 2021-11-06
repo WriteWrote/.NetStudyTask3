@@ -83,12 +83,9 @@ namespace Task3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
-                return;*/
-            //string filename = _disk.getFullName(); //saveFileDialog1.FileName;
-            //String filename = saveFileDialog1.FileName;
             _convertor.WriteToFileFromDisk(_temp, _disk);
             MessageBox.Show("Файл сохранен");
+            display(_disk);
         }
 
         private void button_ConfirmSorting_Click(object sender, EventArgs e)
