@@ -113,7 +113,6 @@ namespace Task3.Forms
             _disk = new CD(_disk.getFullName(), _disk.getCapacity(), _temp.getRecordedFiles());
             this.button_backToHDD_Click(sender, e);
             displayContent();
-            //display(_temp);
         }
 
         private void button_backToHDD_Click(object sender, EventArgs e)
@@ -125,7 +124,6 @@ namespace Task3.Forms
         private void button_AZ_name_Click(object sender, EventArgs e)
         {
             _temp.getRecordedFiles().Sort(new AZ_NameComparer());
-            ;
             display(_temp);
         }
 

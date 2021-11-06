@@ -34,12 +34,6 @@ namespace Task3.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.title = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.button_AZ_name = new System.Windows.Forms.Button();
             this.button_ZA_name = new System.Windows.Forms.Button();
             this.button_findName = new System.Windows.Forms.Button();
@@ -97,67 +91,11 @@ namespace Task3.Forms
             // 
             // title
             // 
-            this.title.Location = new System.Drawing.Point(297, 9);
+            this.title.Location = new System.Drawing.Point(297, 24);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(308, 21);
             this.title.TabIndex = 0;
             this.title.Text = "Поиск по основному полю:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.BackColor = System.Drawing.Color.Black;
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox1.Location = new System.Drawing.Point(37, 37);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(104, 24);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Location = new System.Drawing.Point(684, 37);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(104, 24);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.Location = new System.Drawing.Point(557, 37);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(104, 24);
-            this.checkBox3.TabIndex = 9;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.Location = new System.Drawing.Point(437, 37);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(104, 24);
-            this.checkBox4.TabIndex = 10;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.Location = new System.Drawing.Point(304, 37);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(104, 24);
-            this.checkBox5.TabIndex = 11;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.Location = new System.Drawing.Point(170, 37);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(104, 24);
-            this.checkBox6.TabIndex = 12;
-            this.checkBox6.Text = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // button_AZ_name
             // 
@@ -445,7 +383,7 @@ namespace Task3.Forms
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(891, 9);
+            this.label5.Location = new System.Drawing.Point(891, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(191, 24);
             this.label5.TabIndex = 42;
@@ -454,7 +392,7 @@ namespace Task3.Forms
             // button_filepick
             // 
             this.button_filepick.BackColor = System.Drawing.Color.Black;
-            this.button_filepick.Location = new System.Drawing.Point(832, 50);
+            this.button_filepick.Location = new System.Drawing.Point(832, 65);
             this.button_filepick.Name = "button_filepick";
             this.button_filepick.Size = new System.Drawing.Size(311, 40);
             this.button_filepick.TabIndex = 43;
@@ -464,7 +402,7 @@ namespace Task3.Forms
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(836, 153);
+            this.label7.Location = new System.Drawing.Point(836, 168);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(281, 23);
             this.label7.TabIndex = 46;
@@ -472,7 +410,7 @@ namespace Task3.Forms
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(836, 193);
+            this.label8.Location = new System.Drawing.Point(836, 208);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(338, 28);
             this.label8.TabIndex = 47;
@@ -480,7 +418,7 @@ namespace Task3.Forms
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(903, 465);
+            this.label11.Location = new System.Drawing.Point(903, 480);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(179, 26);
             this.label11.TabIndex = 53;
@@ -488,7 +426,7 @@ namespace Task3.Forms
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(843, 515);
+            this.label12.Location = new System.Drawing.Point(843, 530);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(300, 31);
             this.label12.TabIndex = 54;
@@ -496,7 +434,7 @@ namespace Task3.Forms
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(843, 559);
+            this.label13.Location = new System.Drawing.Point(843, 574);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(300, 31);
             this.label13.TabIndex = 55;
@@ -504,7 +442,7 @@ namespace Task3.Forms
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(843, 601);
+            this.label14.Location = new System.Drawing.Point(843, 616);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(300, 31);
             this.label14.TabIndex = 56;
@@ -513,7 +451,7 @@ namespace Task3.Forms
             // button_SaveAll
             // 
             this.button_SaveAll.BackColor = System.Drawing.Color.Black;
-            this.button_SaveAll.Location = new System.Drawing.Point(832, 234);
+            this.button_SaveAll.Location = new System.Drawing.Point(832, 249);
             this.button_SaveAll.Name = "button_SaveAll";
             this.button_SaveAll.Size = new System.Drawing.Size(311, 40);
             this.button_SaveAll.TabIndex = 57;
@@ -524,7 +462,7 @@ namespace Task3.Forms
             // button_openDiskFiles
             // 
             this.button_openDiskFiles.BackColor = System.Drawing.Color.Black;
-            this.button_openDiskFiles.Location = new System.Drawing.Point(832, 293);
+            this.button_openDiskFiles.Location = new System.Drawing.Point(832, 308);
             this.button_openDiskFiles.Name = "button_openDiskFiles";
             this.button_openDiskFiles.Size = new System.Drawing.Size(311, 40);
             this.button_openDiskFiles.TabIndex = 58;
@@ -533,7 +471,7 @@ namespace Task3.Forms
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(836, 112);
+            this.label6.Location = new System.Drawing.Point(836, 127);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(338, 28);
             this.label6.TabIndex = 44;
@@ -631,7 +569,7 @@ namespace Task3.Forms
             // button_ConfirmSorting
             // 
             this.button_ConfirmSorting.BackColor = System.Drawing.Color.Black;
-            this.button_ConfirmSorting.Location = new System.Drawing.Point(832, 351);
+            this.button_ConfirmSorting.Location = new System.Drawing.Point(832, 366);
             this.button_ConfirmSorting.Name = "button_ConfirmSorting";
             this.button_ConfirmSorting.Size = new System.Drawing.Size(311, 40);
             this.button_ConfirmSorting.TabIndex = 60;
@@ -642,7 +580,7 @@ namespace Task3.Forms
             // button_backToHDD
             // 
             this.button_backToHDD.BackColor = System.Drawing.Color.Black;
-            this.button_backToHDD.Location = new System.Drawing.Point(832, 412);
+            this.button_backToHDD.Location = new System.Drawing.Point(832, 427);
             this.button_backToHDD.Name = "button_backToHDD";
             this.button_backToHDD.Size = new System.Drawing.Size(311, 40);
             this.button_backToHDD.TabIndex = 61;
@@ -724,12 +662,6 @@ namespace Task3.Forms
             this.Controls.Add(this.button_findName);
             this.Controls.Add(this.button_ZA_name);
             this.Controls.Add(this.button_AZ_name);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.title);
             this.ForeColor = System.Drawing.Color.White;
             this.Location = new System.Drawing.Point(15, 15);
@@ -793,12 +725,6 @@ namespace Task3.Forms
         private System.Windows.Forms.Label label11;
 
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.Button button_AZ_name;
         private System.Windows.Forms.Button button_ZA_name;
         private System.Windows.Forms.Button button_findName;
