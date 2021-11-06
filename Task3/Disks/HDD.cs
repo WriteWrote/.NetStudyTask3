@@ -79,5 +79,10 @@ namespace Task3
         {
             return _name;
         }
+
+        public double getReservedSpace()
+        {
+            return _takenDiskSpace;
+        }
     }
 }

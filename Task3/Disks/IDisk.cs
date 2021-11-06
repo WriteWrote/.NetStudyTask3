@@ -15,6 +15,7 @@ namespace Task3
         void setName(String name);
         String getName();
         String getFullName();
+        Double getReservedSpace();
 
     }
 }

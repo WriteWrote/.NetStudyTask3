@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Task3
 {
@@ -26,6 +27,7 @@ namespace Task3
                 {
                     if ("".Equals(p[i])) p[i] = "NoName";
                 }
+
                 diskFiles.Add(new MusicFile(p[0], p[1], p[2], p[3],
                     Convert.ToInt32(p[4]), Convert.ToDouble(p[5])));
             }
@@ -33,16 +35,46 @@ namespace Task3
             return new CD(diskName, sizeOfDisk, diskFiles, takenSpace);
         }
 
-        public void WriteToFileFromDisk(IDisk disk, String filename)
+        public void WriteToFileFromDisk(IDisk temp, IDisk disk) //, bool proceed)
         {
-            String text = disk.getCapacity() + " " + (disk.getCapacity() - disk.getEmptySpace()) + "\r\n";
+            if (disk.getEmptySpace() >= temp.getReservedSpace())
+            {
+                List<MusicFile> l = disk.getRecordedFiles();
+                l.AddRange(temp.getRecordedFiles());
+                disk.EraseAll();
+                disk.RecordFiles(l);
+            }
+            else
+            {
+                MessageBox.Show("Fuck?");
+                bool proceed = true;
+                if (proceed)
+                {
+                    double sizeOfFiles = disk.getReservedSpace();
+                    double emptySpace = disk.getEmptySpace();
+                    int i = 0;
+                    List<MusicFile> l = disk.getRecordedFiles();
+                    while (i < temp.getRecordedFiles().Count &&
+                           disk.getCapacity() >= sizeOfFiles)
+                    {
+                        l.Add(temp.getRecordedFiles()[i]);
+                        sizeOfFiles += temp.getRecordedFiles()[i].GetSize();
+                        i++;
+                    }
 
+                    disk.EraseAll();
+                    disk.RecordFiles(l);
+                }
+            }
+
+            // writing files down to .txt
+            String text = disk.getCapacity() + " " + (disk.getReservedSpace()) + "\r\n";
             foreach (MusicFile file in disk.getRecordedFiles())
             {
                 text += file.ToString();
             }
-            
-            System.IO.File.WriteAllText(filename, text);
+
+            File.WriteAllText(disk.getName(), text);
         }
     }
 }

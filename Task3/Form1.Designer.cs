@@ -190,6 +190,7 @@ namespace Task3
             this.button_findName.TabIndex = 15;
             this.button_findName.Text = "Find";
             this.button_findName.UseVisualStyleBackColor = false;
+            this.button_findName.Click += new System.EventHandler(this.button_findName_Click);
             // 
             // textBox_name
             // 

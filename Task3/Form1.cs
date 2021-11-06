@@ -83,11 +83,11 @@ namespace Task3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
-                return;
-            string filename = _disk.getFullName(); //saveFileDialog1.FileName;
+            /*if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;*/
+            //string filename = _disk.getFullName(); //saveFileDialog1.FileName;
             //String filename = saveFileDialog1.FileName;
-            _convertor.WriteToFileFromDisk(_temp, filename);
+            _convertor.WriteToFileFromDisk(_temp, _disk);
             MessageBox.Show("Файл сохранен");
         }
 
@@ -212,6 +212,21 @@ namespace Task3
             sortList = _computer.getRecordedFiles();
             sortList.Sort(new ZA_CollectionComparer());
             _temp = new CD(_temp.getFullName(), sortList);
+            display(_temp);
+        }
+
+        private void button_findName_Click(object sender, EventArgs e)
+        {
+            string substring = textBox_name.Text.ToLower();
+            _temp.getRecordedFiles().Clear();
+
+            List<MusicFile> pickedFiles = new List<MusicFile>();
+            foreach (MusicFile file in _computer.getRecordedFiles())
+            {
+                if(file.GetName().ToLower().Contains(substring))
+                    pickedFiles.Add(file);
+            }
+            _temp.RecordFiles(pickedFiles);
             display(_temp);
         }
     }
